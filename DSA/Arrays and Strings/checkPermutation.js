@@ -6,8 +6,9 @@ Case sensitive: false
 Taking white spaces into account: true
 */
 
-const string1 = "aim er"
-const string2 = " maire"
+const string1 = "al igned"
+const string2 = "deali ng"
+const string3 = " unknown"
 
 const arePermutations = (string1, string2) => {
     // if the strings are not the same size, one cannot be a permutation of the other
@@ -25,3 +26,4 @@ const arePermutations = (string1, string2) => {
 }
 
 console.log(arePermutations(string1, string2))
+console.log(arePermutations(string1, string3))

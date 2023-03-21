@@ -9,19 +9,20 @@ const string1 = "hello";
 const string2 = "hello woooooorldddddd !!!";
 
 const compressString = (input) => {
+  const inputArray = input.split('')
   let compressedString = "";
   let count = 0;
 
-  for (let i = 0; i < input.split("").length; i++) {
+  for (let i = 0; i < inputArray.length; i++) {
     count++;
 
     // when the characters are different or 
     // if we reach the end of the array, we concatenate the result
     if (
-      i + 1 >= input.split("").length ||
-      input.split("")[i] !== input.split("")[i + 1]
+      i + 1 >= inputArray.length ||
+      inputArray[i] !== inputArray[i + 1]
     ) {
-      compressedString += input.split("")[i] + `${count}`;
+      compressedString += inputArray[i] + `${count}`;
       count = 0;
     }
   }

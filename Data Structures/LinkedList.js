@@ -6,8 +6,17 @@ class LinkedList {
     this.tail = null;
   }
 
-  append() {}
-
+  append(value) {
+    if (!this.tail) {
+      this.head = this.tail = new Node(value);
+    } else {
+      let oldTail = this.tail;
+      this.tail = new Node(value);
+      oldTail.next = this.tail;
+      this.tail.previous = oldTail;
+    }
+  }
+  
   prepend() {}
 
   deleteHead() {}

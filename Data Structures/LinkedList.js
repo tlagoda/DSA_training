@@ -7,6 +7,7 @@ class LinkedList {
   }
 
   append(value) {
+    // in case list is empty
     if (!this.tail) {
       this.head = this.tail = new Node(value);
     } else {
@@ -16,8 +17,18 @@ class LinkedList {
       this.tail.previous = oldTail;
     }
   }
-  
-  prepend() {}
+
+  prepend() {
+    // in case list is empty
+    if (!this.head) {
+      this.head = this.tail = new Node(value);
+    } else {
+      let oldHead = this.head;
+      this.head = new Node(value);
+      oldHead.prev = this.head;
+      this.head.next = oldHead;
+    }
+  }
 
   deleteHead() {}
 

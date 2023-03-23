@@ -30,9 +30,39 @@ class LinkedList {
     }
   }
 
-  deleteHead() {}
+  deleteHead() {
+    // in case list is empty
+    if (!this.head) {
+      return null;
+    } else {
+      let oldHead = this.head;
+      // if only 1 node is left
+      if (this.head === this.tail) {
+        this.head = this.tail = null;
+      } else {
+        this.head = this.head.next;
+        this.head.previous = null;
+      }
+      return oldHead.value;
+    }
+  }
 
-  deleteTail() {}
+  deleteTail() {
+    // in case list is empty
+    if (!this.tail) {
+      return null;
+    } else {
+      let oldTail = this.tail;
+      // if only 1 node is left
+      if (this.head === this.tail) {
+        this.head = this.tail = null;
+      } else {
+        this.tail = this.tail.prev;
+        this.tail.next = null;
+      }
+      return oldTail.value;
+    }
+  }
 
   search() {}
 }

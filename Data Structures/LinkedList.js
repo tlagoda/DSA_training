@@ -64,7 +64,15 @@ class LinkedList {
     }
   }
 
-  search() {}
+  search(value) {
+    let currentNode = this.head;
+    while (currentNode) {
+      if (currentNode.value === value) {
+        return currentNode;
+      }
+      currentNode = currentNode.next;
+    }
+  }
 }
 
 class Node {

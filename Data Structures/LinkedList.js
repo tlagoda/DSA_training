@@ -14,7 +14,7 @@ class LinkedList {
       let oldTail = this.tail;
       this.tail = new Node(value);
       oldTail.next = this.tail;
-      this.tail.previous = oldTail;
+      this.tail.prev = oldTail;
     }
   }
 
@@ -41,7 +41,7 @@ class LinkedList {
         this.head = this.tail = null;
       } else {
         this.head = this.head.next;
-        this.head.previous = null;
+        this.head.prev = null;
       }
       return oldHead.value;
     }
@@ -67,11 +67,12 @@ class LinkedList {
   search(value) {
     let currentNode = this.head;
     while (currentNode) {
-      if (currentNode.value === value) {
+      if (currentNode.data === value) {
         return currentNode;
       }
       currentNode = currentNode.next;
     }
+    return null;
   }
 }
 
@@ -85,14 +86,20 @@ class Node {
 
 // Testing
 
-let myLinkedList = new LinkedList()
+let myLinkedList = new LinkedList();
 
-myLinkedList.append(4)
-myLinkedList.append(22)
-myLinkedList.append(6)
+myLinkedList.append(4);
+myLinkedList.append(22);
+myLinkedList.append(6);
 
-myLinkedList.prepend(14)
-myLinkedList.prepend(30)
-myLinkedList.prepend(1)
+myLinkedList.prepend(14);
+myLinkedList.prepend(30);
+myLinkedList.prepend(1);
 
 console.log(myLinkedList)
+console.log(myLinkedList.search(4))
+
+myLinkedList.deleteHead()
+myLinkedList.deleteTail()
+
+console.log(myLinkedList.search(1))

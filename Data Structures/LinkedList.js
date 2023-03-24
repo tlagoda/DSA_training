@@ -18,7 +18,7 @@ class LinkedList {
     }
   }
 
-  prepend() {
+  prepend(value) {
     // in case list is empty
     if (!this.head) {
       this.head = this.tail = new Node(value);
@@ -79,6 +79,20 @@ class Node {
   constructor(data, prev, next) {
     this.data = data;
     this.prev = prev || null;
-    this.nex = next || null;
+    this.next = next || null;
   }
 }
+
+// Testing
+
+let myLinkedList = new LinkedList()
+
+myLinkedList.append(4)
+myLinkedList.append(22)
+myLinkedList.append(6)
+
+myLinkedList.prepend(14)
+myLinkedList.prepend(30)
+myLinkedList.prepend(1)
+
+console.log(myLinkedList)

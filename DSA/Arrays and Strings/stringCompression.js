@@ -28,3 +28,6 @@ const compressString = (input) => {
 
   return compressedString.length < input.length ? compressedString : input;
 };
+
+const input = prompt('Enter a string : ')
+console.log(compressString(input))

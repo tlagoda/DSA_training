@@ -1,1 +1,1 @@
-# DSA_training
+# Data structures and algorithm training

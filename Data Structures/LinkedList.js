@@ -7,13 +7,29 @@ class LinkedList {
   }
 
   append(value) {
+<<<<<<< HEAD
+=======
     // in case list is empty
+>>>>>>> origin
     if (!this.tail) {
       this.head = this.tail = new Node(value);
     } else {
       let oldTail = this.tail;
       this.tail = new Node(value);
       oldTail.next = this.tail;
+<<<<<<< HEAD
+      this.tail.previous = oldTail;
+    }
+  }
+
+  prepend() {}
+
+  deleteHead() {}
+
+  deleteTail() {}
+
+  search() {}
+=======
       this.tail.prev = oldTail;
     }
   }
@@ -74,12 +90,18 @@ class LinkedList {
     }
     return null;
   }
+>>>>>>> origin
 }
 
 class Node {
   constructor(data, prev, next) {
     this.data = data;
     this.prev = prev || null;
+<<<<<<< HEAD
+    this.nex = next || null;
+  }
+}
+=======
     this.next = next || null;
   }
 }
@@ -103,3 +125,4 @@ myLinkedList.deleteHead()
 myLinkedList.deleteTail()
 
 console.log(myLinkedList.search(1))
+>>>>>>> origin

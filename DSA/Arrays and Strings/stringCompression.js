@@ -5,8 +5,7 @@ of repeated characters. For example, the string aabcccccaaa would become a2blc5a
 the original string. You can assume the string has only uppercase and lowercase letters (a - z). 
 */
 
-const string1 = "hello";
-const string2 = "hello woooooorldddddd !!!";
+const prompt = require('prompt-sync')({sigint: true})
 
 const compressString = (input) => {
   const inputArray = input.split('')
@@ -30,5 +29,5 @@ const compressString = (input) => {
   return compressedString.length < input.length ? compressedString : input;
 };
 
-console.log(compressString(string1));
-console.log(compressString(string2));
+const input = prompt('Enter a string : ')
+console.log(compressString(input))

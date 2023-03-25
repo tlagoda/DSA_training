@@ -9,3 +9,4 @@ Output: True (permutations: "taco cat", "atco eta", etc.)
 
 */
 
+const checkPalindromePermutation = (str) => {};

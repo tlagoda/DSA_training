@@ -3,8 +3,7 @@ Is Unique? : Implement an algorithm to determine if a string has all unique char
 cannot use additional data structures? 
 */
 
-const myString = "hello world!";
-const stringUnique = "algorithms";
+const prompt = require('prompt-sync')({sigint: true})
 
 const hasAllUniqueCharacters = (input) => {
   // we create an array to store the characters we have already encountered once
@@ -21,5 +20,5 @@ const hasAllUniqueCharacters = (input) => {
   return true;
 };
 
-console.log(hasAllUniqueCharacters(myString));
-console.log(hasAllUniqueCharacters(stringUnique));
+const input = prompt('Enter a string : ')
+console.log(hasAllUniqueCharacters(input))

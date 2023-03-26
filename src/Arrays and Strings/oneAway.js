@@ -10,13 +10,7 @@ pale, bale -> true
 pale, bake -> false 
 */
 
-const string1 = "pow";
-const string2 = "row";
-const string3 = "hello";
-const string4 = "hell";
-const string5 = "abcd";
-const string6 = "abcde";
-const string7 = "javascript";
+const prompt = require('prompt-sync')({sigint: true})
 
 const areOneEditAway = (string1, string2) => {
   // we check the length difference
@@ -67,7 +61,6 @@ const checkInsertionOrDeletion = (string1, string2) => {
   return true;
 };
 
-console.log(areOneEditAway(string1, string2));
-console.log(areOneEditAway(string3, string4));
-console.log(areOneEditAway(string5, string6));
-console.log(areOneEditAway(string1, string7));
+const str1 = prompt('Enter string1 : ')
+const str2 = prompt('Enter string2 : ')
+console.log(areOneEditAway(str1, str2))

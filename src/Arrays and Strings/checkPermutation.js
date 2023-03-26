@@ -6,9 +6,7 @@ Case sensitive: false
 Taking white spaces into account: true
 */
 
-const string1 = "al igned"
-const string2 = "deali ng"
-const string3 = " unknown"
+const prompt = require('prompt-sync')({sigint: true})
 
 const arePermutations = (string1, string2) => {
     // if the strings are not the same size, one cannot be a permutation of the other
@@ -25,5 +23,6 @@ const arePermutations = (string1, string2) => {
     return JSON.stringify(sorted1) === JSON.stringify(sorted2)
 }
 
-console.log(arePermutations(string1, string2))
-console.log(arePermutations(string1, string3))
+const str1 = prompt('Enter string1 : ')
+const str2 = prompt('Enter string2 : ')
+console.log(arePermutations(str1, str2))

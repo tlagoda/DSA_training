@@ -40,3 +40,22 @@ class HashTable {
     return this.buckets[index].get(key);
   }
 }
+
+// TESTING
+
+const myHashTable = new HashTable()
+
+myHashTable.insert('sky', 'blue')
+myHashTable.insert('grass', 'green')
+myHashTable.insert('mud', 'brown')
+myHashTable.insert('sun', 'yellow')
+myHashTable.insert('moon', 'white')
+
+console.log(myHashTable)
+console.log('------------------')
+console.log(myHashTable.search('sun'))
+console.log(myHashTable.search('moon'))
+console.log('------------------')
+
+myHashTable.remove('mud')
+console.log(myHashTable)

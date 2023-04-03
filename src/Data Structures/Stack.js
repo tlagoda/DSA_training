@@ -21,7 +21,24 @@ class Stack {
   }
 
   peek() {
-    return this.storage[this.size]
+    return this.storage[this.size];
   }
 }
 
+// TESTING
+
+const myStack = new Stack()
+
+myStack.push('JavaScript')
+myStack.push('C++')
+myStack.push('Python')
+
+console.log(myStack)
+
+myStack.pop()
+myStack.pop()
+
+console.log(myStack)
+
+myStack.push('Go')
+console.log(myStack.peek())

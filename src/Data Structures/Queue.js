@@ -22,3 +22,19 @@ class Queue {
   }
 }
 
+// TESTING
+
+const myQueue = new Queue()
+
+myQueue.enqueue('JJ Watt')
+myQueue.enqueue('Aaron Donald')
+myQueue.enqueue('Tom Brady')
+myQueue.enqueue('Patrick Mahomes')
+myQueue.enqueue('Nick Bosa')
+
+console.log(myQueue)
+
+myQueue.dequeue()
+myQueue.dequeue()
+
+console.log(myQueue)

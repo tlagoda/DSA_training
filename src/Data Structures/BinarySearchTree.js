@@ -154,7 +154,7 @@ class BinarySearchTree {
 
     while (queue.length) {
       let currentNode = queue.shift();
-      result.push(currentNode);
+      result.push(currentNode.value);
 
       if (currentNode.left) {
         queue.push(currentNode.left);
@@ -166,3 +166,29 @@ class BinarySearchTree {
     return result;
   }
 }
+
+// TESTING
+
+const bst = new BinarySearchTree(15);
+
+bst.insert(3);
+bst.insert(36);
+bst.insert(2);
+bst.insert(12);
+bst.insert(28);
+bst.insert(39);
+
+console.log(bst.size());
+console.log(bst.min());
+console.log(bst.max());
+console.log(bst.contains(12));
+console.log(bst.contains(30));
+
+console.log('DFS In Order:')
+console.log(bst.dfsInOrder());
+console.log('DFS Pre Order:')
+console.log(bst.dffPreOrder())
+console.log('DFS Post Order:')
+console.log(bst.dfsPostOrder())
+console.log('BST:')
+console.log(bst.bfs())

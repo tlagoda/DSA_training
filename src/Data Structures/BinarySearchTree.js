@@ -13,7 +13,7 @@ class Node {
 class BinarySearchTree {
   constructor(value) {
     this.root = new Node(value);
-    this.count = 0;
+    this.count = 1;
   }
 
   size() {
@@ -51,7 +51,7 @@ class BinarySearchTree {
   min() {
     let currentNode = this.root;
     // continue traversing left until no more children
-    while (currentNode) {
+    while (currentNode.left) {
       currentNode = currentNode.left;
     }
     return currentNode.value;
@@ -60,7 +60,7 @@ class BinarySearchTree {
   max() {
     let currentNode = this.root;
     // continue traversing right until no more children
-    while (currentNode) {
+    while (currentNode.right) {
       currentNode = currentNode.right;
     }
     return currentNode.value;
@@ -99,6 +99,7 @@ class BinarySearchTree {
       }
     };
 
+    traverse(this.root);
     return result;
   }
 
@@ -119,6 +120,7 @@ class BinarySearchTree {
       }
     };
 
+    traverse(this.root);
     return result;
   }
 
@@ -139,6 +141,7 @@ class BinarySearchTree {
       result.push(node.value);
     };
 
+    traverse(this.root);
     return result;
   }
 

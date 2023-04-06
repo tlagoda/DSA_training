@@ -84,26 +84,6 @@ class LinkedListNode {
   }
 }
 
-// Testing
-
-let myLinkedList = new LinkedList();
-
-myLinkedList.append(4);
-myLinkedList.append(22);
-myLinkedList.append(6);
-
-myLinkedList.prepend(14);
-myLinkedList.prepend(30);
-myLinkedList.prepend(1);
-
-console.log(myLinkedList);
-console.log(myLinkedList.search(4));
-
-myLinkedList.deleteHead();
-myLinkedList.deleteTail();
-
-console.log(myLinkedList.search(1));
-
 // EXPORT
 
 export { LinkedList, LinkedListNode };

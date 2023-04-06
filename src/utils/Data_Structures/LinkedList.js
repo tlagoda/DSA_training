@@ -74,6 +74,16 @@ class LinkedList {
     }
     return null;
   }
+
+  toString() {
+    let head = this.head;
+    const result = [];
+    while (head) {
+      result.push(head.data);
+      head = head.next;
+    }
+    return result.join(" -> ");
+  }
 }
 
 class LinkedListNode {

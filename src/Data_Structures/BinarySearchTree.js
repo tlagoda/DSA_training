@@ -192,3 +192,7 @@ console.log('DFS Post Order:')
 console.log(bst.dfsPostOrder())
 console.log('BST:')
 console.log(bst.bfs())
+
+// EXPORT
+
+export default BinarySearchTree;

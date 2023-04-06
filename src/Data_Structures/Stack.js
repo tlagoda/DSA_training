@@ -42,3 +42,7 @@ console.log(myStack)
 
 myStack.push('Go')
 console.log(myStack.peek())
+
+// EXPORT
+
+export default Stack;

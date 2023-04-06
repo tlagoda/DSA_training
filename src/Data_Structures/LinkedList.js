@@ -103,3 +103,7 @@ myLinkedList.deleteHead()
 myLinkedList.deleteTail()
 
 console.log(myLinkedList.search(1))
+
+// EXPORT
+
+export default LinkedList;

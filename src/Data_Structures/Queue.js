@@ -38,3 +38,7 @@ myQueue.dequeue()
 myQueue.dequeue()
 
 console.log(myQueue)
+
+// EXPORT
+
+export default Queue;

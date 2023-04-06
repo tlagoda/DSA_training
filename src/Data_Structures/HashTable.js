@@ -59,3 +59,7 @@ console.log('------------------')
 
 myHashTable.remove('mud')
 console.log(myHashTable)
+
+// EXPORT
+
+export default HashTable;

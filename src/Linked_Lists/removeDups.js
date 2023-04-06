@@ -2,6 +2,7 @@
     Remove Dups : Write code to remove duplicates from an unsorted linked list.
 */
 
+import { LinkedList } from "../utils/Data_Structures/LinkedList.js";
 import HashTable from "../utils/Data_Structures/HashTable.js";
 
 const removeDuplicates = (linkedList) => {
@@ -19,3 +20,18 @@ const removeDuplicates = (linkedList) => {
     currentNode = currentNode.next;
   }
 };
+
+// TESTING
+
+const myLinkedList = new LinkedList();
+myLinkedList.append(7);
+myLinkedList.append(14);
+myLinkedList.append(88);
+myLinkedList.append(1);
+myLinkedList.append(14);
+myLinkedList.append(3);
+myLinkedList.append(1);
+console.log(`myLinkedList : ${myLinkedList.toString()}`);
+removeDuplicates(myLinkedList);
+console.log("\nRemoving duplicates...\n");
+console.log(`myLinkedList : ${myLinkedList.toString()}`);

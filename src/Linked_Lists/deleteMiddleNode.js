@@ -8,5 +8,9 @@
 */
 
 const removeMiddleNode = (linkedList, node) => {
-    
+    if(node === null || node.next === null) {
+        // no node in the middle
+        return false
+    }
+
 }

@@ -11,7 +11,7 @@ const getKthToLast = (linkedList, k) => {
   let pointer1 = linkedList.head;
   let pointer2 = linkedList.head;
 
-  for (let i = 0; i <= k; i++) {
+  for (let i = 0; i < k; i++) {
     if (!pointer1.next) {
       return linkedList;
     }

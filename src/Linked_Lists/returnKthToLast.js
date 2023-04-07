@@ -8,28 +8,28 @@ const getKthToLast = (linkedList, k) => {
   if (k === 0) {
     return linkedList.tail;
   }
-  let pointer1 = linkedList.head;
-  let pointer2 = linkedList.head;
+  let node1 = linkedList.head;
+  let node2 = linkedList.head;
 
   for (let i = 0; i < k; i++) {
-    if (!pointer1.next) {
-      return linkedList;
+    if (!node1.next) {
+      return null;
     }
-    pointer1 = pointer1.next;
+    node1 = node1.next;
   }
 
-  while (pointer1.next) {
-    pointer2 = pointer2.next;
-    pointer1 = pointer1.next;
+  while (node1.next) {
+    node2 = node2.next;
+    node1 = node1.next;
   }
-  return pointer2;
+  return node2;
 };
 
 // TESTING
 
 const myLinkedList = generateLinkedList(12, 30);
-const k = 5;
+const k = 4;
 console.log(myLinkedList.toString());
 console.log("Retrieving kth to last element...");
-const kthToLastNode = getKthToLast(myLinkedList, k)
-console.log(kthToLastNode.get())
+const kthToLastNode = getKthToLast(myLinkedList, k);
+console.log(kthToLastNode?.get());

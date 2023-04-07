@@ -92,6 +92,14 @@ class LinkedListNode {
     this.prev = prev || null;
     this.next = next || null;
   }
+
+  get() {
+    return {
+      prev: this.prev.data,
+      data: this.data,
+      next: this.next.data
+    }
+  }
 }
 
 // EXPORT

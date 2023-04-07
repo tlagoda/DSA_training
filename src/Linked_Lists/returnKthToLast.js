@@ -31,4 +31,5 @@ const myLinkedList = generateLinkedList(12, 30);
 const k = 5;
 console.log(myLinkedList.toString());
 console.log("Retrieving kth to last element...");
-console.log(getKthToLast(myLinkedList, k));
+const kthToLastNode = getKthToLast(myLinkedList, k)
+console.log(kthToLastNode.get())

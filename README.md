@@ -12,3 +12,7 @@
  - Check Permutation
  - Palindrome Permutation
  - String Compression
+
+## Linked Lists
+ - Remove Dups
+ - Return Kth To Last

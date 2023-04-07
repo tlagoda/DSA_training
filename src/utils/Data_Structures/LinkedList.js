@@ -95,10 +95,10 @@ class LinkedListNode {
 
   get() {
     return {
-      prev: this.prev.data,
+      prev: this.prev?.data,
       data: this.data,
-      next: this.next.data
-    }
+      next: this.next?.data,
+    };
   }
 }
 

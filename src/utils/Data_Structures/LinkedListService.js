@@ -11,3 +11,5 @@ const generateLinkedList = (llSize, maxValue) => {
   }
   return ll;
 };
+
+export { generateLinkedList };

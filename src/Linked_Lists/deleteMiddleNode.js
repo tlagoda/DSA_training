@@ -7,10 +7,16 @@
     Result: nothing is returned, but the new linked list looks like a->b->d->e->f 
 */
 
-const removeMiddleNode = (linkedList, node) => {
-    if(node === null || node.next === null) {
-        // no node in the middle
+import { LinkedList } from "../utils/Data_Structures/LinkedList.js"
+import { generateLinkedList } from '../utils/Data_Structures/LinkedListService.js'
+
+const removeMiddleNode = (node) => {
+    if(node === null || node.prev === null || node.next === null) {
+        // node in the middle
         return false
     }
-
+    const nextNode = node.next
+    node.data = nextNode.data
+    node.next = nextNode.next
+    return true
 }

@@ -7,7 +7,6 @@
     Result: nothing is returned, but the new linked list looks like a->b->d->e->f 
 */
 
-import { LinkedList } from "../utils/Data_Structures/LinkedList.js"
 import { generateLinkedList } from '../utils/Data_Structures/LinkedListService.js'
 
 const removeMiddleNode = (node) => {

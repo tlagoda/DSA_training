@@ -20,3 +20,11 @@ const removeMiddleNode = (node) => {
     node.next = nextNode.next
     return true
 }
+
+// TESTING
+
+const myLinkedList = generateLinkedList(30, 4)
+console.log(myLinkedList.toString())
+removeMiddleNode(myLinkedList.search(3))
+console.log('Removing node...')
+console.log(myLinkedList.toString())

@@ -11,7 +11,6 @@ import { generateLinkedList } from '../utils/Data_Structures/LinkedListService.j
 
 const removeMiddleNode = (node) => {
     if(node === null || node.prev === null || node.next === null) {
-        // node in the middle
         return false
     }
     const nextNode = node.next

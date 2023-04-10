@@ -104,12 +104,8 @@ class LinkedListNode {
     this.next = next || null;
   }
 
-  toString(): string {
-    return JSON.stringify({
-      prevData: this.prev?.data,
-      currentData: this.data,
-      nextData: this.next?.data,
-    });
+  toString() {
+    return `prevData: ${this.prev?.data} | currentData: ${this.data} | nextData: ${this.next?.data}`;
   }
 }
 

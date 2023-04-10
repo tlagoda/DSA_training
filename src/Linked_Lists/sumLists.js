@@ -33,4 +33,17 @@ const sumLists = (linkedList1, linkedList2) => {
   return result;
 };
 
+// TESTING
 
+const ll1 = new LinkedList();
+ll1.append(1);
+ll1.append(7);
+ll1.append(4);
+const ll2 = new LinkedList();
+ll2.append(6);
+ll2.append(9);
+ll2.append(5);
+ll2.append(1)
+
+const result = sumLists(ll1, ll2);
+console.log(result.toString());

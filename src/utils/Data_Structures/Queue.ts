@@ -12,12 +12,12 @@ class Queue {
     this.tail = 0;
   }
 
-  enqueue(element) {
+  enqueue(element: any): void {
     this.storage[this.tail] = element;
     this.tail++;
   }
 
-  dequeue() {
+  dequeue(): any {
     let removed = this.storage[this.head];
     delete this.storage[this.head];
     this.head++;

@@ -9,6 +9,8 @@
 
 import { LinkedList } from "../utils/Data_Structures/LinkedList.js";
 
+// works only for two linked list that are the same size
+// TODO: improve algorithm
 const sumLists = (linkedList1, linkedList2) => {
   let node1 = linkedList1.head;
   let node2 = linkedList2.head;

@@ -16,3 +16,5 @@
 ## Linked Lists
  - Remove Dups
  - Return Kth To Last
+ - Delete Middle Node
+ - Palindrome

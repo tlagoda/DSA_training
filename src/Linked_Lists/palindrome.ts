@@ -4,7 +4,7 @@
 
 import { LinkedList } from "../utils/Data_Structures/LinkedList.js";
 
-const isPalindrome = (linkedList) => {
+const isPalindrome = (linkedList: LinkedList): boolean => {
   let reversedLinkedList = new LinkedList();
   let currentNode = linkedList.head;
   while (currentNode) {
@@ -33,7 +33,7 @@ myLinkedList1.prepend(3);
 myLinkedList1.prepend(5);
 
 console.log(myLinkedList1.toString());
-console.log(`The linked list is a palindrome : ${isPalindrome(myLinkedList1)}`)
+console.log(`The linked list is a palindrome : ${isPalindrome(myLinkedList1)}`);
 
 const myLinkedList2 = new LinkedList();
 myLinkedList2.append(1);
@@ -43,4 +43,4 @@ myLinkedList2.prepend(3);
 myLinkedList2.prepend(10);
 
 console.log(myLinkedList2.toString());
-console.log(`The linked list is a palindrome : ${isPalindrome(myLinkedList2)}`)
+console.log(`The linked list is a palindrome : ${isPalindrome(myLinkedList2)}`);

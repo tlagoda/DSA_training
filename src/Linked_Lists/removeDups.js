@@ -6,7 +6,7 @@
 */
 
 import { LinkedList } from "../utils/Data_Structures/LinkedList.js";
-import HashTable from "../utils/Data_Structures/HashTable.js";
+import { HashTable } from "../utils/Data_Structures/HashTable.js";
 
 const removeDuplicates = (linkedList) => {
   const hashTable = new HashTable();

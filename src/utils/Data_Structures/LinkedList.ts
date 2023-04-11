@@ -1,12 +1,15 @@
 // Implementation of a Linked List
 
 class LinkedList {
+  head: LinkedListNode;
+  tail: LinkedListNode;
+
   constructor() {
     this.head = null;
     this.tail = null;
   }
 
-  append(value) {
+  append(value: number): void {
     // in case list is empty
     if (!this.tail) {
       this.head = this.tail = new LinkedListNode(value);
@@ -18,7 +21,7 @@ class LinkedList {
     }
   }
 
-  prepend(value) {
+  prepend(value: number): void {
     // in case list is empty
     if (!this.head) {
       this.head = this.tail = new LinkedListNode(value);
@@ -30,7 +33,7 @@ class LinkedList {
     }
   }
 
-  deleteHead() {
+  deleteHead(): number {
     // in case list is empty
     if (!this.head) {
       return null;
@@ -43,11 +46,11 @@ class LinkedList {
         this.head = this.head.next;
         this.head.prev = null;
       }
-      return oldHead.value;
+      return oldHead.data;
     }
   }
 
-  deleteTail() {
+  deleteTail(): number {
     // in case list is empty
     if (!this.tail) {
       return null;
@@ -60,11 +63,11 @@ class LinkedList {
         this.tail = this.tail.prev;
         this.tail.next = null;
       }
-      return oldTail.value;
+      return oldTail.data;
     }
   }
 
-  search(value) {
+  search(value: any): LinkedListNode | null {
     let currentNode = this.head;
     while (currentNode) {
       if (currentNode.data === value) {
@@ -75,7 +78,7 @@ class LinkedList {
     return null;
   }
 
-  toString() {
+  toString(): string {
     let head = this.head;
     const result = [];
     while (head) {
@@ -87,18 +90,22 @@ class LinkedList {
 }
 
 class LinkedListNode {
-  constructor(data, prev, next) {
+  data: number;
+  prev: LinkedListNode | null;
+  next: LinkedListNode | null;
+
+  constructor(
+    data: number,
+    prev?: LinkedListNode | null,
+    next?: LinkedListNode | null
+  ) {
     this.data = data;
     this.prev = prev || null;
     this.next = next || null;
   }
 
-  get() {
-    return {
-      prev: this.prev?.data,
-      data: this.data,
-      next: this.next?.data,
-    };
+  toString() {
+    return `prevData: ${this.prev?.data} | currentData: ${this.data} | nextData: ${this.next?.data}`;
   }
 }
 

@@ -2,14 +2,18 @@
     Return Kth to Last: Implement an algorithm to find the kth to last element of a singly linked list. 
 */
 
+import {
+  LinkedList,
+  LinkedListNode,
+} from "../utils/Data_Structures/LinkedList.js";
 import { generateLinkedList } from "../utils/Data_Structures/LinkedListService.js";
 
-const getKthToLast = (linkedList, k) => {
+const getKthToLast = (linkedList: LinkedList, k: number): LinkedListNode | null => {
   if (k === 0) {
     return linkedList.tail;
   }
-  let node1 = linkedList.head;
-  let node2 = linkedList.head;
+  let node1: any = linkedList.head;
+  let node2: any = linkedList.head;
 
   for (let i = 0; i < k; i++) {
     if (!node1.next) {
@@ -32,4 +36,4 @@ const k = 4;
 console.log(myLinkedList.toString());
 console.log("Retrieving kth to last element...");
 const kthToLastNode = getKthToLast(myLinkedList, k);
-console.log(kthToLastNode?.get());
+console.log(kthToLastNode?.toString());

@@ -25,6 +25,10 @@ class Stack {
   peek(): any {
     return this.storage[this.size];
   }
+
+  isEmpty(): boolean {
+    return this.size === 0;
+  }
 }
 
 // EXPORT

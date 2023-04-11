@@ -30,7 +30,9 @@ const sumLists = (
       node1.data + node2.data + extra >= 10 &&
       (node1.next === null || node2.next === null)
     ) {
-      result.append(parseInt("" + (node1.data + node2.data + extra))[0]);
+      result.append(
+        parseInt(String(node1.data + node2.data + extra).charAt(0))
+      );
     }
     node1 = node1.next;
     node2 = node2.next;

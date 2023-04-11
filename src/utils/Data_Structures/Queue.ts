@@ -27,4 +27,4 @@ class Queue {
 
 // EXPORT
 
-export default Queue;
+export { Queue };

@@ -176,4 +176,4 @@ class BinarySearchTree {
 
 // EXPORT
 
-export default BinarySearchTree;
+export { BinarySearchTree };

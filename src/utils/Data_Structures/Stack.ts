@@ -29,4 +29,4 @@ class Stack {
 
 // EXPORT
 
-export default Stack;
+export { Stack };

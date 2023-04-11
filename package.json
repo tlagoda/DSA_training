@@ -6,7 +6,16 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "returnKthToLast": "ts-node --esm src/Linked_Lists/removeDups.js"
+    "checkPermutation": "ts-node --esm src/Arrays_and_Strings/checkPermutation.ts",
+    "isUnique": "ts-node --esm src/Arrays_and_Strings/isUnique.ts",
+    "oneAway": "ts-node --esm src/Arrays_and_Strings/oneAway.ts",
+    "palindromePermutation": "ts-node --esm src/Arrays_and_Strings/palindromePermutation.ts",
+    "stringCompression": "ts-node --esm src/Arrays_and_Strings/stringCompression.ts",
+    "deleteMiddleNode": "ts-node --esm src/Linked_Lists/deleteMiddleNode.ts",
+    "palindrome": "ts-node --esm src/Linked_Lists/palindrome.ts",
+    "removeDups": "ts-node --esm src/Linked_Lists/removeDups.ts",
+    "returnKthToLast": "ts-node --esm src/Linked_Lists/removeDups.ts",
+    "sumLists": "ts-node --esm src/Linked_Lists/sumLists.ts"
   },
   "repository": {
     "type": "git",

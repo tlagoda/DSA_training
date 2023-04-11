@@ -24,6 +24,10 @@ class Queue {
     this.head++;
     return removed;
   }
+
+  isEmpty(): boolean {
+    return Object.keys(this.storage).length === 0;
+  }
 }
 
 // TESTING

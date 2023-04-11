@@ -1,6 +1,6 @@
-import { LinkedList } from "./LinkedList";
+import { LinkedList } from "./LinkedList.js";
 
-export const generateLinkedList = (llSize: number, maxValue: number): LinkedList => {
+const generateLinkedList = (llSize: number, maxValue: number): LinkedList => {
   const ll = new LinkedList();
   for (let i = 1; i <= llSize; i++) {
     if (i % 2 !== 0) {
@@ -11,3 +11,5 @@ export const generateLinkedList = (llSize: number, maxValue: number): LinkedList
   }
   return ll;
 };
+
+export { generateLinkedList };

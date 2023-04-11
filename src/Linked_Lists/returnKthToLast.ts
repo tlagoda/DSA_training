@@ -5,15 +5,15 @@
 import {
   LinkedList,
   LinkedListNode,
-} from "../utils/Data_Structures/LinkedList";
-import { generateLinkedList } from "../utils/Data_Structures/LinkedListService";
+} from "../utils/Data_Structures/LinkedList.js";
+import { generateLinkedList } from "../utils/Data_Structures/LinkedListService.js";
 
-const getKthToLast = (linkedList: LinkedList, k: number): LinkedListNode => {
+const getKthToLast = (linkedList: LinkedList, k: number): LinkedListNode | null => {
   if (k === 0) {
     return linkedList.tail;
   }
-  let node1 = linkedList.head;
-  let node2 = linkedList.head;
+  let node1: any = linkedList.head;
+  let node2: any = linkedList.head;
 
   for (let i = 0; i < k; i++) {
     if (!node1.next) {

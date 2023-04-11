@@ -10,9 +10,10 @@ pale, bale -> true
 pale, bake -> false 
 */
 
-const prompt = require('prompt-sync')({sigint: true})
+import promptSync from "prompt-sync";
+const prompt = promptSync();
 
-const areOneEditAway = (string1, string2) => {
+const areOneEditAway = (string1: string, string2: string): boolean => {
   // we check the length difference
   if (Math.abs(string1.length - string2.length) > 1) {
     return false;
@@ -42,7 +43,10 @@ const areOneEditAway = (string1, string2) => {
   }
 };
 
-const checkInsertionOrDeletion = (string1, string2) => {
+const checkInsertionOrDeletion = (
+  string1: string,
+  string2: string
+): boolean => {
   let index1 = 0;
   let index2 = 0;
   while (index1 < string1.length && index2 < string2.length) {
@@ -61,6 +65,6 @@ const checkInsertionOrDeletion = (string1, string2) => {
   return true;
 };
 
-const str1 = prompt('Enter string1 : ')
-const str2 = prompt('Enter string2 : ')
-console.log(areOneEditAway(str1, str2))
+const str1 = prompt("Enter string1 : ");
+const str2 = prompt("Enter string2 : ");
+console.log(areOneEditAway(str1, str2));

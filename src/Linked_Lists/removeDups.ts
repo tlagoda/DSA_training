@@ -8,7 +8,7 @@
 import { LinkedList } from "../utils/Data_Structures/LinkedList.js";
 import { HashTable } from "../utils/Data_Structures/HashTable.js";
 
-const removeDuplicates = (linkedList) => {
+const removeDuplicates = (linkedList: LinkedList): void => {
   const hashTable = new HashTable();
   let previousNode = null;
   let currentNode = linkedList.head;

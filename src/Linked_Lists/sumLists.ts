@@ -11,7 +11,10 @@ import { LinkedList } from "../utils/Data_Structures/LinkedList.js";
 
 // works only for two linked list that are the same size
 // TODO: improve algorithm
-const sumLists = (linkedList1, linkedList2) => {
+const sumLists = (
+  linkedList1: LinkedList,
+  linkedList2: LinkedList
+): LinkedList => {
   let node1 = linkedList1.head;
   let node2 = linkedList2.head;
   const result = new LinkedList();
@@ -27,7 +30,7 @@ const sumLists = (linkedList1, linkedList2) => {
       node1.data + node2.data + extra >= 10 &&
       (node1.next === null || node2.next === null)
     ) {
-      result.append(("" + (node1.data + node2.data + extra))[0]);
+      result.append(parseInt("" + (node1.data + node2.data + extra))[0]);
     }
     node1 = node1.next;
     node2 = node2.next;

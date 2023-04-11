@@ -5,22 +5,20 @@ of repeated characters. For example, the string aabcccccaaa would become a2blc5a
 the original string. You can assume the string has only uppercase and lowercase letters (a - z). 
 */
 
-const prompt = require('prompt-sync')({sigint: true})
+import promptSync from "prompt-sync";
+const prompt = promptSync();
 
-const compressString = (input) => {
-  const inputArray = input.split('')
+const compressString = (input: string): string => {
+  const inputArray = input.split("");
   let compressedString = "";
   let count = 0;
 
   for (let i = 0; i < inputArray.length; i++) {
     count++;
 
-    // when the characters are different or 
+    // when the characters are different or
     // if we reach the end of the array, we concatenate the result
-    if (
-      i + 1 >= inputArray.length ||
-      inputArray[i] !== inputArray[i + 1]
-    ) {
+    if (i + 1 >= inputArray.length || inputArray[i] !== inputArray[i + 1]) {
       compressedString += inputArray[i] + `${count}`;
       count = 0;
     }
@@ -29,5 +27,5 @@ const compressString = (input) => {
   return compressedString.length < input.length ? compressedString : input;
 };
 
-const input = prompt('Enter a string : ')
-console.log(compressString(input))
+const input = prompt("Enter a string : ");
+console.log(compressString(input));

@@ -14,7 +14,7 @@ class HashTable {
     }
   }
 
-  _hash(key: any): number {
+  _hash(key: string): number {
     let hashedKey = 0;
     for (let i = 0; i < key.length; i++) {
       hashedKey = key.charCodeAt(i);

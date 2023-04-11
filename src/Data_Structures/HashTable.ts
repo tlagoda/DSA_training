@@ -3,6 +3,9 @@
 */
 
 class HashTable {
+  size: number;
+  buckets: Map<number, any>[];
+
   constructor() {
     this.size = 20;
     this.buckets = Array(this.size);
@@ -12,7 +15,7 @@ class HashTable {
   }
 
   // hash function
-  _hash(key) {
+  _hash(key: string): number {
     let hashedKey = 0;
     for (let i = 0; i < key.length; i++) {
       hashedKey = key.charCodeAt(i);
@@ -20,14 +23,14 @@ class HashTable {
     return hashedKey % this.size;
   }
 
-  insert(key, value) {
-    let index = this._hash(key, this.size);
+  insert(key, value): void {
+    let index = this._hash(key);
     // set is a native method of Map
     this.buckets[index].set(key, value);
   }
 
-  remove(key) {
-    let index = this._hash(key, this.size);
+  remove(key): any {
+    let index = this._hash(key);
     // get and delete are native methods of Map
     let deleted = this.buckets[index].get(key);
     this.buckets[index].delete(key);
@@ -35,8 +38,8 @@ class HashTable {
     return deleted;
   }
 
-  search(key) {
-    let index = this._hash(key, this.size);
+  search(key): any {
+    let index = this._hash(key);
     return this.buckets[index].get(key);
   }
 }
@@ -59,7 +62,3 @@ console.log("------------------");
 
 myHashTable.remove("mud");
 console.log(myHashTable);
-
-// EXPORT
-
-export default HashTable;

@@ -67,7 +67,7 @@ class LinkedList {
     }
   }
 
-  search(value: any): LinkedListNode | null {
+  search(value: number): LinkedListNode | null {
     let currentNode = this.head;
     while (currentNode) {
       if (currentNode.data === value) {

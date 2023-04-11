@@ -3,6 +3,10 @@
 */
 
 class Node {
+  value: number;
+  left: Node;
+  right: Node;
+
   constructor(value) {
     this.value = value;
     this.left = null;
@@ -11,20 +15,23 @@ class Node {
 }
 
 class BinarySearchTree {
-  constructor(value) {
+  root: Node;
+  count: number;
+
+  constructor(value: number) {
     this.root = new Node(value);
     this.count = 1;
   }
 
-  size() {
+  size(): number {
     return this.count;
   }
 
-  insert(value) {
+  insert(value: number): void {
     this.count++;
     let newNode = new Node(value);
 
-    const searchTree = (node) => {
+    const searchTree = (node: Node) => {
       // if value < node.value go left
       if (value < node.value) {
         // if no left child, append new node
@@ -48,7 +55,7 @@ class BinarySearchTree {
     searchTree(this.root);
   }
 
-  min() {
+  min(): number {
     let currentNode = this.root;
     // continue traversing left until no more children
     while (currentNode.left) {
@@ -57,7 +64,7 @@ class BinarySearchTree {
     return currentNode.value;
   }
 
-  max() {
+  max(): number {
     let currentNode = this.root;
     // continue traversing right until no more children
     while (currentNode.right) {
@@ -66,7 +73,7 @@ class BinarySearchTree {
     return currentNode.value;
   }
 
-  contains(value) {
+  contains(value: number): boolean {
     let currentNode = this.root;
     while (currentNode) {
       if (value === currentNode.value) {
@@ -84,9 +91,9 @@ class BinarySearchTree {
   // depth-first search - branch by branch
 
   // left, root, right
-  dfsInOrder() {
-    let result = [];
-    const traverse = (node) => {
+  dfsInOrder(): number[] {
+    let result = [] as number[];
+    const traverse = (node: Node) => {
       // if there is a left child, go left again
       if (node.left) {
         traverse(node.left);
@@ -104,10 +111,10 @@ class BinarySearchTree {
   }
 
   // root, left, right
-  dffPreOrder() {
+  dffPreOrder(): number[] {
     let result = [];
 
-    const traverse = (node) => {
+    const traverse = (node: Node) => {
       // capture root node value
       result.push(node.value);
       // if there is a left child, go left again
@@ -125,10 +132,10 @@ class BinarySearchTree {
   }
 
   // left, right, root
-  dfsPostOrder() {
+  dfsPostOrder(): number[] {
     let result = [];
 
-    const traverse = (node) => {
+    const traverse = (node: Node) => {
       // if there is a left child, go left again
       if (node.left) {
         traverse(node.left);
@@ -167,6 +174,11 @@ class BinarySearchTree {
   }
 }
 
+// EXPORT
+
+export { BinarySearchTree };
+
+
 // TESTING
 
 const bst = new BinarySearchTree(15);
@@ -192,7 +204,3 @@ console.log('DFS Post Order:')
 console.log(bst.dfsPostOrder())
 console.log('BST:')
 console.log(bst.bfs())
-
-// EXPORT
-
-export default BinarySearchTree;

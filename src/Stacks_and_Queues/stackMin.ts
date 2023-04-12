@@ -44,3 +44,17 @@ class MinStack extends Stack {
     }
   }
 }
+
+// TESTING
+
+const minStack = new MinStack();
+minStack.printMin();
+minStack.push(100)
+minStack.push(120)
+minStack.printMin()
+minStack.push(40)
+minStack.push(80)
+minStack.push(35)
+minStack.printMin()
+minStack.pop()
+minStack.printMin()

@@ -12,16 +12,20 @@ class Queue {
     this.tail = 0;
   }
 
-  enqueue(element: any): void {
+  add(element: any): void {
     this.storage[this.tail] = element;
     this.tail++;
   }
 
-  dequeue(): any {
+  remove(): any {
     let removed = this.storage[this.head];
     delete this.storage[this.head];
     this.head++;
     return removed;
+  }
+
+  peek(): any {
+    return this.head;
   }
 
   isEmpty(): boolean {

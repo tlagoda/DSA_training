@@ -13,16 +13,20 @@ class Queue {
     this.tail = 0;
   }
 
-  enqueue(element): void {
+  add(element: any): void {
     this.storage[this.tail] = element;
     this.tail++;
   }
 
-  dequeue(): any {
+  remove(): any {
     let removed = this.storage[this.head];
     delete this.storage[this.head];
     this.head++;
     return removed;
+  }
+
+  peek(): any {
+    return this.head;
   }
 
   isEmpty(): boolean {
@@ -34,15 +38,15 @@ class Queue {
 
 const myQueue = new Queue();
 
-myQueue.enqueue("JJ Watt");
-myQueue.enqueue("Aaron Donald");
-myQueue.enqueue("Tom Brady");
-myQueue.enqueue("Patrick Mahomes");
-myQueue.enqueue("Nick Bosa");
+myQueue.add("JJ Watt");
+myQueue.add("Aaron Donald");
+myQueue.add("Tom Brady");
+myQueue.add("Patrick Mahomes");
+myQueue.add("Nick Bosa");
 
 console.log(myQueue);
 
-myQueue.dequeue();
-myQueue.dequeue();
+myQueue.remove();
+myQueue.remove();
 
 console.log(myQueue);

@@ -15,7 +15,8 @@
     "palindrome": "ts-node --esm src/Linked_Lists/palindrome.ts",
     "removeDups": "ts-node --esm src/Linked_Lists/removeDups.ts",
     "returnKthToLast": "ts-node --esm src/Linked_Lists/removeDups.ts",
-    "sumLists": "ts-node --esm src/Linked_Lists/sumLists.ts"
+    "sumLists": "ts-node --esm src/Linked_Lists/sumLists.ts",
+    "minStack": "ts-node --esm src/Stacks_and_Queues/stackMin.ts"
   },
   "repository": {
     "type": "git",

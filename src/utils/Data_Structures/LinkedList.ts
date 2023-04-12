@@ -1,8 +1,8 @@
 // Implementation of a Linked List
 
-class DoublyLinkedList {
-  head: DoublyLinkedListNode;
-  tail: DoublyLinkedListNode;
+class LinkedList {
+  head: LinkedListNode;
+  tail: LinkedListNode;
 
   constructor() {
     this.head = null;
@@ -12,10 +12,10 @@ class DoublyLinkedList {
   append(value: number): void {
     // in case list is empty
     if (!this.tail) {
-      this.head = this.tail = new DoublyLinkedListNode(value);
+      this.head = this.tail = new LinkedListNode(value);
     } else {
       let oldTail = this.tail;
-      this.tail = new DoublyLinkedListNode(value);
+      this.tail = new LinkedListNode(value);
       oldTail.next = this.tail;
       this.tail.prev = oldTail;
     }
@@ -24,10 +24,10 @@ class DoublyLinkedList {
   prepend(value: number): void {
     // in case list is empty
     if (!this.head) {
-      this.head = this.tail = new DoublyLinkedListNode(value);
+      this.head = this.tail = new LinkedListNode(value);
     } else {
       let oldHead = this.head;
-      this.head = new DoublyLinkedListNode(value);
+      this.head = new LinkedListNode(value);
       oldHead.prev = this.head;
       this.head.next = oldHead;
     }
@@ -67,7 +67,7 @@ class DoublyLinkedList {
     }
   }
 
-  search(value: number): DoublyLinkedListNode | null {
+  search(value: number): LinkedListNode | null {
     let currentNode = this.head;
     while (currentNode) {
       if (currentNode.data === value) {
@@ -89,15 +89,15 @@ class DoublyLinkedList {
   }
 }
 
-class DoublyLinkedListNode {
+class LinkedListNode {
   data: number;
-  prev: DoublyLinkedListNode | null;
-  next: DoublyLinkedListNode | null;
+  prev: LinkedListNode | null;
+  next: LinkedListNode | null;
 
   constructor(
     data: number,
-    prev?: DoublyLinkedListNode | null,
-    next?: DoublyLinkedListNode | null
+    prev?: LinkedListNode | null,
+    next?: LinkedListNode | null
   ) {
     this.data = data;
     this.prev = prev || null;
@@ -111,4 +111,4 @@ class DoublyLinkedListNode {
 
 // EXPORT
 
-export { DoublyLinkedList, DoublyLinkedListNode };
+export { LinkedList, LinkedListNode };

@@ -7,7 +7,7 @@
     Result: nothing is returned, but the new linked list looks like a->b->d->e->f 
 */
 
-import { generateLinkedList } from "../utils/Data_Structures/LinkedListService.js";
+import { generateDoublyLinkedList } from "../utils/Data_Structures/LinkedListService.js";
 import { DoublyLinkedListNode } from "../utils/Data_Structures/DoublyLinkedList.js";
 
 const removeMiddleNode = (node: DoublyLinkedListNode): boolean => {
@@ -22,7 +22,7 @@ const removeMiddleNode = (node: DoublyLinkedListNode): boolean => {
 
 // TESTING
 
-const myLinkedList = generateLinkedList(30, 4);
+const myLinkedList = generateDoublyLinkedList(30, 4);
 console.log(myLinkedList.toString());
 removeMiddleNode(myLinkedList.search(3));
 console.log("Removing node...");

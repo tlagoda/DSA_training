@@ -6,7 +6,7 @@ import {
   DoublyLinkedList,
   DoublyLinkedListNode,
 } from "../utils/Data_Structures/DoublyLinkedList.js";
-import { generateLinkedList } from "../utils/Data_Structures/LinkedListService.js";
+import { generateDoublyLinkedList } from "../utils/Data_Structures/LinkedListService.js";
 
 const getKthToLast = (linkedList: DoublyLinkedList, k: number): DoublyLinkedListNode | null => {
   if (k === 0) {
@@ -31,7 +31,7 @@ const getKthToLast = (linkedList: DoublyLinkedList, k: number): DoublyLinkedList
 
 // TESTING
 
-const myLinkedList = generateLinkedList(12, 30);
+const myLinkedList = generateDoublyLinkedList(12, 30);
 const k = 4;
 console.log(myLinkedList.toString());
 console.log("Retrieving kth to last element...");

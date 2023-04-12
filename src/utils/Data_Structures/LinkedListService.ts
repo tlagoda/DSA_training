@@ -1,7 +1,7 @@
-import { LinkedList } from "./LinkedList.js";
+import { DoublyLinkedList } from "./DoublyLinkedList.js";
 
-const generateLinkedList = (llSize: number, maxValue: number): LinkedList => {
-  const ll = new LinkedList();
+const generateDoublyLinkedList = (llSize: number, maxValue: number): DoublyLinkedList => {
+  const ll = new DoublyLinkedList();
   for (let i = 1; i <= llSize; i++) {
     if (i % 2 !== 0) {
       ll.append(Math.floor(Math.random() * maxValue) + 1);
@@ -12,4 +12,4 @@ const generateLinkedList = (llSize: number, maxValue: number): LinkedList => {
   return ll;
 };
 
-export { generateLinkedList };
+export { generateDoublyLinkedList };

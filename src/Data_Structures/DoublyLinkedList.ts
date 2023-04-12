@@ -1,8 +1,8 @@
 // Implementation of a Linked List
 
-class LinkedList {
-  head: LinkedListNode;
-  tail: LinkedListNode;
+class DoublyLinkedList {
+  head: DoublyLinkedListNode;
+  tail: DoublyLinkedListNode;
 
   constructor() {
     this.head = null;
@@ -12,10 +12,10 @@ class LinkedList {
   append(value: number): void {
     // in case list is empty
     if (!this.tail) {
-      this.head = this.tail = new LinkedListNode(value);
+      this.head = this.tail = new DoublyLinkedListNode(value);
     } else {
       let oldTail = this.tail;
-      this.tail = new LinkedListNode(value);
+      this.tail = new DoublyLinkedListNode(value);
       oldTail.next = this.tail;
       this.tail.prev = oldTail;
     }
@@ -24,10 +24,10 @@ class LinkedList {
   prepend(value: number): void {
     // in case list is empty
     if (!this.head) {
-      this.head = this.tail = new LinkedListNode(value);
+      this.head = this.tail = new DoublyLinkedListNode(value);
     } else {
       let oldHead = this.head;
-      this.head = new LinkedListNode(value);
+      this.head = new DoublyLinkedListNode(value);
       oldHead.prev = this.head;
       this.head.next = oldHead;
     }
@@ -67,7 +67,7 @@ class LinkedList {
     }
   }
 
-  search(value: number): LinkedListNode | null {
+  search(value: number): DoublyLinkedListNode | null {
     let currentNode = this.head;
     while (currentNode) {
       if (currentNode.data === value) {
@@ -79,15 +79,15 @@ class LinkedList {
   }
 }
 
-class LinkedListNode {
+class DoublyLinkedListNode {
   data: number;
-  prev: LinkedListNode | null;
-  next: LinkedListNode | null;
+  prev: DoublyLinkedListNode | null;
+  next: DoublyLinkedListNode | null;
 
   constructor(
     data: number,
-    prev?: LinkedListNode | null,
-    next?: LinkedListNode | null
+    prev?: DoublyLinkedListNode | null,
+    next?: DoublyLinkedListNode | null
   ) {
     this.data = data;
     this.prev = prev || null;
@@ -97,7 +97,7 @@ class LinkedListNode {
 
 // Testing
 
-let myLinkedList = new LinkedList();
+let myLinkedList = new DoublyLinkedList();
 
 myLinkedList.append(4);
 myLinkedList.append(22);

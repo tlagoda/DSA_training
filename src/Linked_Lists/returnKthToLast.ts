@@ -3,12 +3,12 @@
 */
 
 import {
-  LinkedList,
-  LinkedListNode,
-} from "../utils/Data_Structures/LinkedList.js";
+  DoublyLinkedList,
+  DoublyLinkedListNode,
+} from "../utils/Data_Structures/DoublyLinkedList.js";
 import { generateLinkedList } from "../utils/Data_Structures/LinkedListService.js";
 
-const getKthToLast = (linkedList: LinkedList, k: number): LinkedListNode | null => {
+const getKthToLast = (linkedList: DoublyLinkedList, k: number): DoublyLinkedListNode | null => {
   if (k === 0) {
     return linkedList.tail;
   }

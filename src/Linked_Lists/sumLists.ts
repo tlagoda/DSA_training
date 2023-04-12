@@ -7,17 +7,17 @@
     Output: 2 -> 1 -> 9. That is, 912.
 */
 
-import { LinkedList } from "../utils/Data_Structures/LinkedList.js";
+import { DoublyLinkedList } from "../utils/Data_Structures/DoublyLinkedList.js";
 
 // works only for two linked list that are the same size
 // TODO: improve algorithm
 const sumLists = (
-  linkedList1: LinkedList,
-  linkedList2: LinkedList
-): LinkedList => {
+  linkedList1: DoublyLinkedList,
+  linkedList2: DoublyLinkedList
+): DoublyLinkedList => {
   let node1 = linkedList1.head;
   let node2 = linkedList2.head;
-  const result = new LinkedList();
+  const result = new DoublyLinkedList();
   let extra = 0;
   while (node1 || node2) {
     if (node1.data + node2.data + extra >= 10) {
@@ -42,11 +42,11 @@ const sumLists = (
 
 // TESTING
 
-const ll1 = new LinkedList();
+const ll1 = new DoublyLinkedList();
 ll1.append(1);
 ll1.append(7);
 ll1.append(4);
-const ll2 = new LinkedList();
+const ll2 = new DoublyLinkedList();
 ll2.append(6);
 ll2.append(9);
 ll2.append(5);

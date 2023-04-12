@@ -5,10 +5,10 @@
     //TODO
 */
 
-import { LinkedList } from "../utils/Data_Structures/LinkedList.js";
+import { DoublyLinkedList } from "../utils/Data_Structures/DoublyLinkedList.js";
 import { HashTable } from "../utils/Data_Structures/HashTable.js";
 
-const removeDuplicates = (linkedList: LinkedList): void => {
+const removeDuplicates = (linkedList: DoublyLinkedList): void => {
   const hashTable = new HashTable();
   let previousNode = null;
   let currentNode = linkedList.head;
@@ -26,7 +26,7 @@ const removeDuplicates = (linkedList: LinkedList): void => {
 
 // TESTING
 
-const myLinkedList = new LinkedList();
+const myLinkedList = new DoublyLinkedList();
 myLinkedList.append(7);
 myLinkedList.append(14);
 myLinkedList.append(88);

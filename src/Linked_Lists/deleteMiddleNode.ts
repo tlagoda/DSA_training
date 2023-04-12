@@ -8,9 +8,9 @@
 */
 
 import { generateLinkedList } from "../utils/Data_Structures/LinkedListService.js";
-import { LinkedListNode } from "../utils/Data_Structures/LinkedList.js";
+import { DoublyLinkedListNode } from "../utils/Data_Structures/DoublyLinkedList.js";
 
-const removeMiddleNode = (node: LinkedListNode): boolean => {
+const removeMiddleNode = (node: DoublyLinkedListNode): boolean => {
   if (node === null || node.prev === null || node.next === null) {
     return false;
   }

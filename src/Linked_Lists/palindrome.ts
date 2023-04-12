@@ -2,10 +2,10 @@
     Palindrome: Implement a function to check if a linked list is a palindrome. 
 */
 
-import { LinkedList } from "../utils/Data_Structures/LinkedList.js";
+import { DoublyLinkedList } from "../utils/Data_Structures/DoublyLinkedList.js";
 
-const isPalindrome = (linkedList: LinkedList): boolean => {
-  let reversedLinkedList = new LinkedList();
+const isPalindrome = (linkedList: DoublyLinkedList): boolean => {
+  let reversedLinkedList = new DoublyLinkedList();
   let currentNode = linkedList.head;
   while (currentNode) {
     reversedLinkedList.prepend(currentNode.data);
@@ -25,7 +25,7 @@ const isPalindrome = (linkedList: LinkedList): boolean => {
 
 // TESTING
 
-const myLinkedList1 = new LinkedList();
+const myLinkedList1 = new DoublyLinkedList();
 myLinkedList1.append(1);
 myLinkedList1.append(3);
 myLinkedList1.append(5);
@@ -35,7 +35,7 @@ myLinkedList1.prepend(5);
 console.log(myLinkedList1.toString());
 console.log(`The linked list is a palindrome : ${isPalindrome(myLinkedList1)}`);
 
-const myLinkedList2 = new LinkedList();
+const myLinkedList2 = new DoublyLinkedList();
 myLinkedList2.append(1);
 myLinkedList2.append(3);
 myLinkedList2.append(5);

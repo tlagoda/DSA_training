@@ -1,8 +1,8 @@
-// Implementation of a Doubly Linked List
+// Implementation of a Singly Linked List
 
-class DoublyLinkedList {
-  head: DoublyLinkedListNode;
-  tail: DoublyLinkedListNode;
+class SinglyLinkedList {
+  head: SinglyLinkedListNode;
+  tail: SinglyLinkedListNode;
 
   constructor() {
     this.head = null;
@@ -12,23 +12,21 @@ class DoublyLinkedList {
   append(value: number): void {
     // in case list is empty
     if (!this.tail) {
-      this.head = this.tail = new DoublyLinkedListNode(value);
+      this.head = this.tail = new SinglyLinkedListNode(value);
     } else {
       let oldTail = this.tail;
-      this.tail = new DoublyLinkedListNode(value);
+      this.tail = new SinglyLinkedListNode(value);
       oldTail.next = this.tail;
-      this.tail.prev = oldTail;
     }
   }
 
   prepend(value: number): void {
     // in case list is empty
     if (!this.head) {
-      this.head = this.tail = new DoublyLinkedListNode(value);
+      this.head = this.tail = new SinglyLinkedListNode(value);
     } else {
       let oldHead = this.head;
-      this.head = new DoublyLinkedListNode(value);
-      oldHead.prev = this.head;
+      this.head = new SinglyLinkedListNode(value);
       this.head.next = oldHead;
     }
   }
@@ -44,7 +42,6 @@ class DoublyLinkedList {
         this.head = this.tail = null;
       } else {
         this.head = this.head.next;
-        this.head.prev = null;
       }
       return oldHead.data;
     }
@@ -54,20 +51,19 @@ class DoublyLinkedList {
     // in case list is empty
     if (!this.tail) {
       return null;
-    } else {
-      let oldTail = this.tail;
-      // if only 1 node is left
-      if (this.head === this.tail) {
-        this.head = this.tail = null;
-      } else {
-        this.tail = this.tail.prev;
-        this.tail.next = null;
-      }
-      return oldTail.data;
     }
+    let secondLastNode = this.head;
+
+    while (secondLastNode.next.next !== null) {
+      secondLastNode = secondLastNode.next;
+    }
+    secondLastNode.next = null;
+    let oldTail = this.tail;
+    this.tail = secondLastNode;
+    return oldTail.data;
   }
 
-  search(value: number): DoublyLinkedListNode | null {
+  search(value: number): SinglyLinkedListNode | null {
     let currentNode = this.head;
     while (currentNode) {
       if (currentNode.data === value) {
@@ -89,26 +85,20 @@ class DoublyLinkedList {
   }
 }
 
-class DoublyLinkedListNode {
+class SinglyLinkedListNode {
   data: number;
-  prev: DoublyLinkedListNode | null;
-  next: DoublyLinkedListNode | null;
+  next: SinglyLinkedListNode;
 
-  constructor(
-    data: number,
-    prev?: DoublyLinkedListNode | null,
-    next?: DoublyLinkedListNode | null
-  ) {
+  constructor(data: number, next?: SinglyLinkedListNode | null) {
     this.data = data;
-    this.prev = prev || null;
     this.next = next || null;
   }
 
   toString(): string {
-    return `prevData: ${this.prev?.data} | currentData: ${this.data} | nextData: ${this.next?.data}`;
+    return `currentData: ${this.data} | nextData: ${this.next?.data}`;
   }
 }
 
 // EXPORT
 
-export { DoublyLinkedList, DoublyLinkedListNode };
+export { SinglyLinkedListNode, SinglyLinkedList }

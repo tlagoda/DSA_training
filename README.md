@@ -2,6 +2,7 @@
 ## Data Structures
 - Binary Search Tree
 - Hash Table
+- Singly Linked List
 - Doubly Linked List
 - Queue
 - Stack

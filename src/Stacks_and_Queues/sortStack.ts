@@ -34,5 +34,6 @@ console.log(myStack.storage);
 
 sortStack(myStack);
 console.log("\nSorting stack...\n");
+
 console.log(`Element ${myStack.peek()} is now at the top of the stack...`);
 console.log(myStack.storage);

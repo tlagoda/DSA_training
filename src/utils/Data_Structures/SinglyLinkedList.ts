@@ -63,6 +63,17 @@ class SinglyLinkedList {
     return oldTail.data;
   }
 
+  search(value: number): SinglyLinkedListNode | null {
+    let currentNode = this.head;
+    while (currentNode) {
+      if (currentNode.data === value) {
+        return currentNode;
+      }
+      currentNode = currentNode.next;
+    }
+    return null;
+  }
+
   toString(): string {
     let head = this.head;
     const result = [];

@@ -97,20 +97,20 @@ class DoublyLinkedListNode {
 
 // Testing
 
-let myLinkedList = new DoublyLinkedList();
+const myDoublyLinkedList = new DoublyLinkedList();
 
-myLinkedList.append(4);
-myLinkedList.append(22);
-myLinkedList.append(6);
+myDoublyLinkedList.append(4);
+myDoublyLinkedList.append(22);
+myDoublyLinkedList.append(6);
 
-myLinkedList.prepend(14);
-myLinkedList.prepend(30);
-myLinkedList.prepend(1);
+myDoublyLinkedList.prepend(14);
+myDoublyLinkedList.prepend(30);
+myDoublyLinkedList.prepend(1);
 
-console.log(myLinkedList);
-console.log(myLinkedList.search(4));
+console.log(myDoublyLinkedList);
+console.log(myDoublyLinkedList.search(4));
 
-myLinkedList.deleteHead();
-myLinkedList.deleteTail();
+myDoublyLinkedList.deleteHead();
+myDoublyLinkedList.deleteTail();
 
-console.log(myLinkedList.search(1));
+console.log(myDoublyLinkedList.search(1));

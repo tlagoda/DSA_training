@@ -19,3 +19,6 @@
  - Delete Middle Node
  - Palindrome
  - Sum Lists
+
+## Stacks & Queues
+ - Stack Min

@@ -43,9 +43,14 @@ const qvs = new QueueViaStacks();
 for (let i = 1; i <= 5; i++) {
   qvs.add(i);
 }
-console.log(qvs.peek())
+console.log('Added 1, 2, 3, 4, 5...')
+console.log(`Element at the front: ${qvs.peek()}\n`)
 qvs.remove();
 qvs.remove();
+console.log('Removed 1, 2...')
 console.log(qvs.peek())
+console.log(`Element at the front: ${qvs.peek()}\n`)
 qvs.add(6)
+console.log('Added 6...')
 console.log(qvs.peek())
+console.log(`Element at the front: ${qvs.peek()}\n`)

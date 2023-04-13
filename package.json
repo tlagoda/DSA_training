@@ -17,7 +17,8 @@
     "returnKthToLast": "ts-node --esm src/Linked_Lists/removeDups.ts",
     "sumLists": "ts-node --esm src/Linked_Lists/sumLists.ts",
     "minStack": "ts-node --esm src/Stacks_and_Queues/stackMin.ts",
-    "queueViaStacks": "ts-node --esm src/Stacks_and_Queues/queueViaStacks.ts"
+    "queueViaStacks": "ts-node --esm src/Stacks_and_Queues/queueViaStacks.ts",
+    "sortStack": "ts-node --esm src/Stacks_and_Queues/sortStack.ts"
   },
   "repository": {
     "type": "git",

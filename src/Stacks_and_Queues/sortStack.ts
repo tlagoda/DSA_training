@@ -4,3 +4,19 @@
     (such as an array). The stack supports the following operations: push, pop, peek, and is Empty. 
 */
 
+import { Stack } from "../utils/Data_Structures/Stack.ts";
+
+const sortStack = (s: Stack) => {
+  const tempStack = new Stack();
+  while (!s.isEmpty()) {
+    const temp = s.pop();
+    while (!tempStack.isEmpty() && tempStack.peek() > temp) {
+      s.push(tempStack.pop());
+    }
+    tempStack.push(temp);
+  }
+
+  while (!tempStack.isEmpty()) {
+    s.push(tempStack.pop());
+  }
+};

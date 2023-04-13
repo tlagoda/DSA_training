@@ -20,3 +20,19 @@ const sortStack = (s: Stack) => {
     s.push(tempStack.pop());
   }
 };
+
+// TESTING
+
+const myStack = new Stack();
+
+for (let i = 0; i < 10; i++) {
+    myStack.push(Math.floor(Math.random() * 100) + 1)
+}
+
+console.log(`Element ${myStack.peek()} is at the top of the stack...`);
+console.log(myStack.storage);
+
+sortStack(myStack);
+console.log("\nSorting stack...\n");
+console.log(`Element ${myStack.peek()} is now at the top of the stack...`);
+console.log(myStack.storage);

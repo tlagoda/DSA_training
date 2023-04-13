@@ -30,6 +30,48 @@ class SinglyLinkedList {
       this.head.next = oldHead;
     }
   }
+
+  deleteHead(): number {
+    // in case list is empty
+    if (!this.head) {
+      return null;
+    } else {
+      let oldHead = this.head;
+      // if only 1 node is left
+      if (this.head === this.tail) {
+        this.head = this.tail = null;
+      } else {
+        this.head = this.head.next;
+      }
+      return oldHead.data;
+    }
+  }
+
+  deleteTail(): number {
+    // in case list is empty
+    if (!this.tail) {
+      return null;
+    }
+    let secondLastNode = this.head;
+
+    while (secondLastNode.next.next !== null) {
+      secondLastNode = secondLastNode.next;
+    }
+    secondLastNode.next = null;
+    let oldTail = this.tail;
+    this.tail = secondLastNode;
+    return oldTail.data;
+  }
+
+  toString(): string {
+    let head = this.head;
+    const result = [];
+    while (head) {
+      result.push(head.data);
+      head = head.next;
+    }
+    return result.join(" -> ");
+  }
 }
 
 class SinglyLinkedListNode {

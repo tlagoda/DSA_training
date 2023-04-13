@@ -1,4 +1,4 @@
-// Implementation of a Linked List
+// Implementation of a Doubly Linked List
 
 class DoublyLinkedList {
   head: DoublyLinkedListNode;
@@ -104,7 +104,7 @@ class DoublyLinkedListNode {
     this.next = next || null;
   }
 
-  toString() {
+  toString(): string {
     return `prevData: ${this.prev?.data} | currentData: ${this.data} | nextData: ${this.next?.data}`;
   }
 }

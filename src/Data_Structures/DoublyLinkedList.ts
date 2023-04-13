@@ -50,7 +50,7 @@ class DoublyLinkedList {
     }
   }
 
-  deleteTail() : number{
+  deleteTail(): number {
     // in case list is empty
     if (!this.tail) {
       return null;
@@ -76,6 +76,16 @@ class DoublyLinkedList {
       currentNode = currentNode.next;
     }
     return null;
+  }
+
+  toString(): string {
+    let head = this.head;
+    const result = [];
+    while (head) {
+      result.push(head.data);
+      head = head.next;
+    }
+    return result.join(" -> ");
   }
 }
 
@@ -107,7 +117,7 @@ myDoublyLinkedList.prepend(14);
 myDoublyLinkedList.prepend(30);
 myDoublyLinkedList.prepend(1);
 
-console.log(myDoublyLinkedList);
+console.log(myDoublyLinkedList.toString());
 console.log(myDoublyLinkedList.search(4));
 
 myDoublyLinkedList.deleteHead();

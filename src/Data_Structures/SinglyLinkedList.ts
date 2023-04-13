@@ -99,3 +99,24 @@ class SinglyLinkedList {
     }
   }
   
+// TESTING
+
+const mySinglyLinkedList = new SinglyLinkedList()
+
+mySinglyLinkedList.append(4)
+mySinglyLinkedList.append(77)
+mySinglyLinkedList.append(68)
+
+console.log(mySinglyLinkedList.toString())
+
+mySinglyLinkedList.prepend(44)
+mySinglyLinkedList.prepend(19)
+mySinglyLinkedList.prepend(100)
+
+console.log(mySinglyLinkedList.toString())
+
+mySinglyLinkedList.deleteHead();
+mySinglyLinkedList.deleteTail();
+
+console.log(mySinglyLinkedList.search(44))
+console.log(mySinglyLinkedList.search(100))

@@ -98,3 +98,7 @@ class SinglyLinkedListNode {
     return `currentData: ${this.data} | nextData: ${this.next?.data}`;
   }
 }
+
+// EXPORT
+
+export { SinglyLinkedListNode, SinglyLinkedList }

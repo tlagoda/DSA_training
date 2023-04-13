@@ -36,3 +36,16 @@ class QueueViaStacks {
     }
   }
 }
+
+// TESTING
+
+const qvs = new QueueViaStacks();
+for (let i = 1; i <= 5; i++) {
+  qvs.add(i);
+}
+console.log(qvs.peek())
+qvs.remove();
+qvs.remove();
+console.log(qvs.peek())
+qvs.add(6)
+console.log(qvs.peek())

@@ -18,7 +18,8 @@
     "sumLists": "ts-node --esm src/Linked_Lists/sumLists.ts",
     "minStack": "ts-node --esm src/Stacks_and_Queues/stackMin.ts",
     "queueViaStacks": "ts-node --esm src/Stacks_and_Queues/queueViaStacks.ts",
-    "sortStack": "ts-node --esm src/Stacks_and_Queues/sortStack.ts"
+    "sortStack": "ts-node --esm src/Stacks_and_Queues/sortStack.ts",
+    "twoSum": "ts-node --esm src/Leetcode/twoSum.ts"
   },
   "repository": {
     "type": "git",

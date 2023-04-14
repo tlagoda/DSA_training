@@ -16,4 +16,8 @@ const twoSum = (nums: number[], target: number): number[] => {
   }
 };
 
+// TESTING 
 
+console.log(twoSum([3,1,3], 6));
+console.log(twoSum([3,4,9,1,1,4,7], 16))
+console.log(twoSum([1,1,1,1,1,1], 9))

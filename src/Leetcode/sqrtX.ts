@@ -16,3 +16,11 @@ const squareRoot = (x: number) => {
     }
   }
 };
+
+// TESTING
+
+console.log(`0: ${squareRoot(0)}`)
+console.log(`9: ${squareRoot(9)}`)
+console.log(`35344: ${squareRoot(35344)}`)
+console.log(`187: ${squareRoot(187)}`)
+console.log(`1000: ${squareRoot(1000)}`)

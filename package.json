@@ -19,7 +19,8 @@
     "minStack": "ts-node --esm src/Stacks_and_Queues/stackMin.ts",
     "queueViaStacks": "ts-node --esm src/Stacks_and_Queues/queueViaStacks.ts",
     "sortStack": "ts-node --esm src/Stacks_and_Queues/sortStack.ts",
-    "twoSum": "ts-node --esm src/Leetcode/twoSum.ts"
+    "twoSum": "ts-node --esm src/Leetcode/twoSum.ts",
+    "sqrtX": "ts-node --esm src/Leetcode/sqrtX.ts "
   },
   "repository": {
     "type": "git",

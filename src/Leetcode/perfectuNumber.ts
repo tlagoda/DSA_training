@@ -14,3 +14,11 @@ const isPerfectNumber = (num: number): boolean => {
   }
   return sum === num
 };
+
+// TESTING
+
+console.log(`28 is a perfect number : ${isPerfectNumber(28)}`)
+console.log(`1 is a perfect number : ${isPerfectNumber(1)}`)
+console.log(`8128 is a perfect number : ${isPerfectNumber(8128)}`)
+console.log(`20 is a perfect number : ${isPerfectNumber(20)}`)
+console.log(`33550336 is a perfect number : ${isPerfectNumber(33550336)}`)

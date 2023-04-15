@@ -20,7 +20,8 @@
     "queueViaStacks": "ts-node --esm src/Stacks_and_Queues/queueViaStacks.ts",
     "sortStack": "ts-node --esm src/Stacks_and_Queues/sortStack.ts",
     "twoSum": "ts-node --esm src/Leetcode/twoSum.ts",
-    "sqrtX": "ts-node --esm src/Leetcode/sqrtX.ts "
+    "sqrtX": "ts-node --esm src/Leetcode/sqrtX.ts ",
+    "perfectNumber": "ts-node --esm src/Leetcode/perfectNumber.ts"
   },
   "repository": {
     "type": "git",

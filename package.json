@@ -19,9 +19,9 @@
     "minStack": "ts-node --esm src/Stacks_and_Queues/stackMin.ts",
     "queueViaStacks": "ts-node --esm src/Stacks_and_Queues/queueViaStacks.ts",
     "sortStack": "ts-node --esm src/Stacks_and_Queues/sortStack.ts",
-    "twoSum": "ts-node --esm src/Leetcode/twoSum.ts",
-    "sqrtX": "ts-node --esm src/Leetcode/sqrtX.ts ",
-    "perfectNumber": "ts-node --esm src/Leetcode/perfectNumber.ts"
+    "twoSum": "ts-node --esm src/Leetcode/easy/twoSum.ts",
+    "sqrtX": "ts-node --esm src/Leetcode/easy/sqrtX.ts ",
+    "perfectNumber": "ts-node --esm src/Leetcode/easy/perfectNumber.ts"
   },
   "repository": {
     "type": "git",

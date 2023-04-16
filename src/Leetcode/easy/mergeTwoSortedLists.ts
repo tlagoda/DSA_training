@@ -47,3 +47,21 @@ const mergeTwoListsUsingList = (
   }
   return sortedList;
 };
+
+// TESTING
+
+const ll1 = new SinglyLinkedList()
+const ll2 = new SinglyLinkedList()
+
+ll1.append(1)
+ll2.append(2)
+ll2.append(4)
+ll2.append(7)
+ll2.append(10)
+ll1.append(2)
+ll1.append(4)
+ll1.append(4)
+ll1.append(7)
+ll1.append(9)
+
+console.log(mergeTwoListsUsingList(ll1,ll2).toString())

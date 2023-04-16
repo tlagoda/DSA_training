@@ -11,6 +11,54 @@ import {
   SinglyLinkedListNode,
 } from "../../utils/Data_Structures/SinglyLinkedList.ts";
 
+const mergeTwoListsUsingNode = (
+  n1: SinglyLinkedListNode,
+  n2: SinglyLinkedListNode
+): SinglyLinkedListNode => {
+  let head = new SinglyLinkedListNode(null);
+  let tail = head;
+
+  while (n1 && n2) {
+    if (n1.data < n2.data) {
+      tail.next = n1;
+      n1 = n1.next;
+    } else {
+      tail.next = n2;
+      n2 = n2.next;
+    }
+
+    tail = tail.next;
+  }
+
+  tail.next = !n1 ? n2 : n1;
+  return head.next;
+};
+
+// TESTING
+
+console.log("Test mergeTwoListsUsingNode:");
+
+const ll1 = new SinglyLinkedList();
+const ll2 = new SinglyLinkedList();
+
+const values1 = [1, 2, 4, 7, 10];
+const values2 = [2, 4, 4, 7, 9];
+
+values1.forEach((value) => {
+  ll1.append(value);
+});
+values2.forEach((value) => {
+  ll2.append(value);
+});
+
+let result = mergeTwoListsUsingNode(ll1.head, ll2.head);
+const nodes = [];
+while (result) {
+  nodes.push(result.data);
+  result = result.next;
+}
+console.log(nodes.join(" -> "));
+
 const mergeTwoListsUsingList = (
   list1: SinglyLinkedList,
   list2: SinglyLinkedList
@@ -49,43 +97,16 @@ const mergeTwoListsUsingList = (
 
 // TESTING
 
-console.log("Test mergeTwoListsUsingList:\n");
+console.log("\nTest mergeTwoListsUsingList:");
 
-const ll1 = new SinglyLinkedList();
-const ll2 = new SinglyLinkedList();
+const ll3 = new SinglyLinkedList();
+const ll4 = new SinglyLinkedList();
 
-ll1.append(1);
-ll2.append(2);
-ll2.append(4);
-ll2.append(7);
-ll2.append(10);
-ll1.append(2);
-ll1.append(4);
-ll1.append(4);
-ll1.append(7);
-ll1.append(9);
+values1.forEach((value) => {
+  ll3.append(value);
+});
+values2.forEach((value) => {
+  ll4.append(value);
+});
 
-console.log(mergeTwoListsUsingList(ll1, ll2).toString());
-
-const mergeTwoListsUsingNode = (
-  n1: SinglyLinkedListNode,
-  n2: SinglyLinkedListNode
-): SinglyLinkedListNode => {
-  let head = new SinglyLinkedListNode(null);
-  let tail = head;
-
-  while (n1 && n2) {
-    if (n1.data < n2.data) {
-      tail.next = n1;
-      n1 = n1.next;
-    } else {
-      tail.next = n2;
-      n2 = n2.next;
-    }
-
-    tail = tail.next;
-  }
-
-  tail.next = !n1 ? n2 : n1;
-  return head.next;
-};
+console.log(mergeTwoListsUsingList(ll3, ll4).toString());

@@ -6,3 +6,44 @@
     Return the head of the merged linked list.
 */
 
+import {
+  SinglyLinkedList,
+  SinglyLinkedListNode,
+} from "../../utils/Data_Structures/SinglyLinkedList.ts";
+
+const mergeTwoListsUsingList = (
+  list1: SinglyLinkedList,
+  list2: SinglyLinkedList
+): SinglyLinkedList => {
+  let currentNode1 = list1.head;
+  let currentNode2 = list2.head;
+  let sortedList = new SinglyLinkedList();
+  // find a way to create a node and add
+
+  while (currentNode1?.data && currentNode2?.data) {
+    if (currentNode1.data > currentNode2.data) {
+      sortedList.append(currentNode2.data);
+      if (currentNode2.next) {
+        currentNode2 = currentNode2.next;
+      } else {
+        currentNode2 = null
+        while(currentNode1) {
+            sortedList.append(currentNode1.data)
+            currentNode1 = currentNode1.next
+        }
+      }
+    } else {
+      sortedList.append(currentNode1.data);
+      if (currentNode1.next) {
+        currentNode1 = currentNode1.next;
+      } else {
+        currentNode1 = null
+        while(currentNode2) {
+            sortedList.append(currentNode2.data)
+            currentNode2 = currentNode2.next
+        }
+      }
+    }
+  }
+  return sortedList;
+};

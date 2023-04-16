@@ -21,7 +21,8 @@
     "sortStack": "ts-node --esm src/Stacks_and_Queues/sortStack.ts",
     "twoSum": "ts-node --esm src/Leetcode/easy/twoSum.ts",
     "sqrtX": "ts-node --esm src/Leetcode/easy/sqrtX.ts ",
-    "perfectNumber": "ts-node --esm src/Leetcode/easy/perfectNumber.ts"
+    "perfectNumber": "ts-node --esm src/Leetcode/easy/perfectNumber.ts",
+    "mergeTwoSortedLists": "ts-node --esm src/Leetcode/easy/mergeTwoSortedLists.ts"
   },
   "repository": {
     "type": "git",

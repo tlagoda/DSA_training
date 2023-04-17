@@ -4,8 +4,17 @@
     threshold. Implement a data structure SetOfStacks that mimics this. SetO-fStacks should be
     composed of several stacks and should create a new stack once the previous one exceeds capacity.
     SetOfStacks. push() and SetOfStacks. pop() should behave identically to a single stack
-    (that is, pop () should return the same values as it would if there were just a single stack).
+    (that is, pop() should return the same values as it would if there were just a single stack).
     FOLLOW UP
     Implement a function popAt(index: number) which performs a pop operation on a specific sub-stack. 
 */
 
+import { Stack } from "../utils/Data_Structures/Stack.ts";
+
+class SetOfStacks {
+  threshold: number;
+  stacks: Stack[];
+  constructor(threshold: number) {
+    this.threshold = threshold;
+  }
+}

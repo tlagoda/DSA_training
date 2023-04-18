@@ -24,7 +24,8 @@
     "perfectNumber": "ts-node --esm src/Leetcode/easy/perfectNumber.ts",
     "mergeTwoSortedLists": "ts-node --esm src/Leetcode/easy/mergeTwoSortedLists.ts",
     "stackOfPlates": "ts-node --esm src/Stacks_and_Queues/stackOfPlates.ts",
-    "rotateList": "ts-node --esm src/Leetcode/medium/rotateList.ts"
+    "rotateList": "ts-node --esm src/Leetcode/medium/rotateList.ts",
+    "productOfArrayExceptSelf": "ts-node --esm src/Leetcode/medium/productOfArrayExceptSelf.ts"
   },
   "repository": {
     "type": "git",

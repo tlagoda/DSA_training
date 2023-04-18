@@ -3,7 +3,10 @@
 */
 
 import { generateSinglyLinkedList } from "../../utils/Data_Structures/LinkedListService.js";
-import { SinglyLinkedList } from "../../utils/Data_Structures/SinglyLinkedList.js";
+import {
+  SinglyLinkedList,
+  SinglyLinkedListNode,
+} from "../../utils/Data_Structures/SinglyLinkedList.js";
 
 const getRotatedListGivenAList = (
   list: SinglyLinkedList,
@@ -35,3 +38,9 @@ const list1 = generateSinglyLinkedList(10, 5);
 console.log("Before: " + list1.toString());
 console.log("After: " + getRotatedListGivenAList(list1, 4).toString());
 
+const getRotatedListGivenTheHead = (
+  head: SinglyLinkedListNode,
+  k: number
+): SinglyLinkedListNode => {
+    
+};

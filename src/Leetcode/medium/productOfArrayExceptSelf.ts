@@ -7,6 +7,8 @@ The product of any prefix or suffix of nums is guaranteed to fit in a 32-bit int
 You must write an algorithm that runs in O(n) time and without using the division operation.
 */
 
+import { generateArray } from "../../utils/Data_Structures/ArrayService.ts";
+
 const getProductOfArray = (nums: number[]) => {
   const left: number[] = [1];
   const right: number[] = [1];
@@ -24,3 +26,8 @@ const getProductOfArray = (nums: number[]) => {
 };
 
 // TESTING
+
+const myArray = generateArray(10, 5)
+
+console.log('Input: ' + myArray)
+console.log('Output: ' + getProductOfArray(myArray))

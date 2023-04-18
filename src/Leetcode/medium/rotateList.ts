@@ -42,5 +42,24 @@ const getRotatedListGivenTheHead = (
   head: SinglyLinkedListNode,
   k: number
 ): SinglyLinkedListNode => {
-    
+  if (head == null) return null;
+  if (head.next == null) return head;
+
+  let listSize = 1;
+  let oldTail: SinglyLinkedListNode = head;
+  while (oldTail.next) {
+    oldTail = oldTail.next;
+    listSize++;
+  }
+  oldTail.next = head;
+
+  let newTail: SinglyLinkedListNode = head;
+  for (let i = 0; i < listSize - (k % listSize) - 1; i++) {
+    newTail = newTail.next;
+  }
+  let newHead: SinglyLinkedListNode = newTail.next;
+
+  newTail.next = null;
+
+  return newHead;
 };

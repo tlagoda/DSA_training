@@ -22,3 +22,5 @@ const getProductOfArray = (nums: number[]) => {
   }
   return result;
 };
+
+// TESTING

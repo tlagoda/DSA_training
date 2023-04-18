@@ -63,3 +63,19 @@ const getRotatedListGivenTheHead = (
 
   return newHead;
 };
+
+// TESTING
+
+console.log("\ngetRotatedListGivenTheHead with k = 4:");
+const list2 = generateSinglyLinkedList(10,10)
+console.log('Before: ' + list2.toString())
+const newHead = getRotatedListGivenTheHead(list2.head, 4)
+
+let currentNode = newHead
+const result = []
+while(currentNode) {
+    result.push(currentNode.data)
+    currentNode = currentNode.next
+}
+
+console.log('After: ' + result.join(' -> '))

@@ -9,7 +9,7 @@
     Implement a function popAt(index: number) which performs a pop operation on a specific sub-stack. 
 */
 
-import { Stack } from "../utils/Data_Structures/Stack.ts";
+import { Stack } from "../utils/Data_Structures/Stack.js";
 
 class SetOfStacks {
   threshold: number;

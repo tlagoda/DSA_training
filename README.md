@@ -24,3 +24,16 @@
 ## Stacks & Queues
  - Stack Min
  - Queue via Stacks
+ - Sort Stack
+ - Stack Of Plates
+
+## Leetcode
+ ### Easy
+ - Merge Two Sorted Lists
+ - Perfect Number
+ - sqrt X
+ - Two Sum
+ 
+ ### Medium
+ - Product Of Array Except Self
+ - Rotate List

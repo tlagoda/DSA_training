@@ -64,3 +64,9 @@ const convertRomanToInteger = (roman: string): number => {
   return result;
 };
 
+// TESTING
+
+console.log(`CMXCIV = ${convertRomanToInteger('CMXCIV')}`)
+console.log(`XIV = ${convertRomanToInteger('XIV')}`)
+console.log(`XCIV = ${convertRomanToInteger('XCIV')}`)
+console.log(`CDXLIV = ${convertRomanToInteger('CDXLIV')}`)

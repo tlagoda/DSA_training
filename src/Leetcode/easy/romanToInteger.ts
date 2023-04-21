@@ -28,4 +28,39 @@
     It is guaranteed that s is a valid roman numeral in the range [1, 3999].
 */
 
-const convertRomanToInteger = (roman: string): number => {};
+const convertRomanToInteger = (roman: string): number => {
+  const mapping = {
+    I: 1,
+    V: 5,
+    X: 10,
+    L: 50,
+    C: 100,
+    D: 500,
+    M: 1000,
+    IV: 4,
+    IX: 9,
+    XL: 40,
+    XC: 90,
+    CD: 400,
+    CM: 900,
+  };
+
+  let result = 0;
+  let count = 0;
+
+  while (count < roman.length) {
+    if (
+      count < roman.length - 1 &&
+      Object.keys(mapping).includes(roman.slice(count, count + 2))
+    ) {
+      result += mapping[roman.slice(count, count + 2)];
+      count += 2;
+    } else {
+      result += mapping[roman[count]];
+      count++;
+    }
+  }
+
+  return result;
+};
+

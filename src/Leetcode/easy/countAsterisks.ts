@@ -21,3 +21,8 @@ const countAsterisks = (s: string): number => {
   return result;
 };
 
+// TESTING
+
+console.log(`l|*e*et|c**o|*de|: ${countAsterisks("l|*e*et|c**o|*de|")}`)
+console.log(`hello|*|: ${countAsterisks("hello|*|")}`)
+console.log(`yo|uar|e**|b|e***au|tifu|l: ${countAsterisks("yo|uar|e**|b|e***au|tifu|l")}`)

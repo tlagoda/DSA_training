@@ -11,3 +11,14 @@ const getMajorityElement = (nums: number[]): number => {
   ];
 };
 
+// TESTING
+console.log(
+  `Majority element in [1,2,3,1,1,4] is : ${getMajorityElement([
+    1, 2, 3, 1, 1, 4,
+  ])}`
+);
+console.log(
+  `Majority element in [1,2,3,1,1,4,5,5,5,5,5] is : ${getMajorityElement([
+    1, 2, 3, 1, 1, 4, 5, 5, 5, 5, 5,
+  ])}`
+);

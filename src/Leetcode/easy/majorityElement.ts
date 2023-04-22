@@ -6,9 +6,12 @@
 */
 
 const getMajorityElement = (nums: number[]): number => {
-  return nums.sort()[
-    nums.length % 2 === 0 ? nums.length / 2 : (nums.length + 1) / 2
-  ];
+  const map = new Map();
+  for (let num of nums) {
+    let freq = (map.get(num) ?? 0) + 1;
+    map.set(num, freq);
+    if (freq > nums.length / 2) return num;
+  }
 };
 
 // TESTING

@@ -8,4 +8,25 @@
     Output: [[1],[1,1],[1,2,1],[1,3,3,1],[1,4,6,4,1]]
 */
 
-const getPascalTriangle = (numRows: number): Array<number[]> => {};
+const getPascalTriangle = (numRows: number): Array<number[]> => {
+  const pascalTriangle = [[1]];
+  
+  for (let i = 1; i < numRows; i++) {
+    const row = [];
+    let count1 = 0;
+    let count2 = 1;
+
+    row.push(1)
+
+    while (pascalTriangle[i-1][count1] && pascalTriangle[i-1][count2]) {
+      row.push(pascalTriangle[i-1][count1] + pascalTriangle[i-1][count2]);
+      count1++;
+      count2++;
+    }
+
+    row.push(1)
+    pascalTriangle.push(row)
+  }
+  return pascalTriangle
+};
+

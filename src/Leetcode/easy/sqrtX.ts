@@ -8,10 +8,13 @@
 const squareRoot = (x: number) => {
   for (let i = 0; i <= x; i++) {
     if (i * i < x) {
+      // impossible
       continue;
     } else if (i * i > x) {
+      // result is greater than x, so we round it down to the nearest integer
       return i - 1;
     } else {
+      // perfect match
       return i;
     }
   }

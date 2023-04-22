@@ -9,6 +9,7 @@
 */
 
 const getPascalTriangle = (numRows: number): Array<number[]> => {
+  // base case
   const pascalTriangle = [[1]];
 
   for (let i = 1; i < numRows; i++) {
@@ -16,14 +17,17 @@ const getPascalTriangle = (numRows: number): Array<number[]> => {
     let count1 = 0;
     let count2 = 1;
 
+    // we push the left end
     row.push(1);
 
+    // For each pair of numbers, we add their sum
     while (pascalTriangle[i - 1][count1] && pascalTriangle[i - 1][count2]) {
       row.push(pascalTriangle[i - 1][count1] + pascalTriangle[i - 1][count2]);
       count1++;
       count2++;
     }
 
+    // we push the right end
     row.push(1);
     pascalTriangle.push(row);
   }

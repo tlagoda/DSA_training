@@ -33,6 +33,8 @@
  - Perfect Number
  - sqrt X
  - Two Sum
+ - Roman To Integer
+ - Pascal's Triangle
  
  ### Medium
  - Product Of Array Except Self

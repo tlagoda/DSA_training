@@ -28,7 +28,8 @@
     "productOfArrayExceptSelf": "ts-node --esm src/Leetcode/medium/productOfArrayExceptSelf.ts",
     "romanToInteger": "ts-node --esm src/Leetcode/easy/romanToInteger.ts",
     "pascalTriangle": "ts-node --esm src/Leetcode/easy/pascalTriangle.ts",
-    "countAsterisks": "ts-node --esm src/Leetcode/easy/countAsterisks.ts"
+    "countAsterisks": "ts-node --esm src/Leetcode/easy/countAsterisks.ts",
+    "majorityElement": "ts-node --esm src/Leetcode/easy/majorityElement.ts"
   },
   "repository": {
     "type": "git",

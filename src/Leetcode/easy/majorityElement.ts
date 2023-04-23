@@ -7,9 +7,12 @@
 
 const getMajorityElement = (nums: number[]): number => {
   const map = new Map();
+  // we store the number of occurrences of a value in a Map
   for (let num of nums) {
+    // incrementing or initializing
     let freq = (map.get(num) ?? 0) + 1;
     map.set(num, freq);
+    // when the number of occurrences exceeds nums.length / 2, we return the value
     if (freq > nums.length / 2) return num;
   }
 };

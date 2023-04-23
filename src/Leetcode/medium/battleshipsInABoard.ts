@@ -13,5 +13,19 @@
 */
 
 const countBattleships = (board: string[][]) => {
-    
+    let result = 0
+    let rows = board.length
+    let columns = board[0].length
+
+    for (let i = 0 ; i < rows ; i ++) {
+        for (let j = 0 ; j < columns ; j ++) {
+            const left = j - 1 >= 0 ? board[i][j-1] : '.'
+            const top = i - 1 >= 0 ? board[i-1][j] : '.'
+            if (board[i][j] === 'X' && left !== 'X' && top !== 'X') {
+                result ++
+            }
+        }
+    }
+
+    return result
 };

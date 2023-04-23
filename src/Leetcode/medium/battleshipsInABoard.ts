@@ -12,3 +12,6 @@
     Output: 2
 */
 
+const countBattleships = (board: string[][]) => {
+    
+};

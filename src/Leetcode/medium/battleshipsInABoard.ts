@@ -13,19 +13,55 @@
 */
 
 const countBattleships = (board: string[][]) => {
-    let result = 0
-    let rows = board.length
-    let columns = board[0].length
+  let result = 0;
+  let rows = board.length;
+  let columns = board[0].length;
 
-    for (let i = 0 ; i < rows ; i ++) {
-        for (let j = 0 ; j < columns ; j ++) {
-            const left = j - 1 >= 0 ? board[i][j-1] : '.'
-            const top = i - 1 >= 0 ? board[i-1][j] : '.'
-            if (board[i][j] === 'X' && left !== 'X' && top !== 'X') {
-                result ++
-            }
-        }
+  // we look for the heads of the ships
+  for (let i = 0; i < rows; i++) {
+    for (let j = 0; j < columns; j++) {
+      // we check the element above and the box on the left
+      const left = j - 1 >= 0 ? board[i][j - 1] : ".";
+      const top = i - 1 >= 0 ? board[i - 1][j] : ".";
+
+      // when we find the head of the ship, we increment
+      if (board[i][j] === "X" && left !== "X" && top !== "X") {
+        result++;
+      }
     }
+  }
 
-    return result
+  return result;
 };
+
+// TESTING
+
+const board1 = [
+  ["X", ".", ".", "X"],
+  [".", ".", ".", "X"],
+  [".", ".", ".", "X"],
+];
+
+const board2 = [
+  ["X", ".", ".", "X"],
+  [".", "X", ".", "X"],
+  [".", "X", ".", "X"],
+];
+
+const board3 = [
+  ["X", ".", "X", "."],
+  [".", "X", ".", "X"],
+  ["X", ".", "X", "."],
+];
+
+console.log("Board 1:");
+console.log(board1);
+console.log(`Number of ships: ${countBattleships(board1)}`);
+
+console.log("Board 2:");
+console.log(board2);
+console.log(`Number of ships: ${countBattleships(board2)}`);
+
+console.log("Board 3:");
+console.log(board3);
+console.log(`Number of ships: ${countBattleships(board3)}`);

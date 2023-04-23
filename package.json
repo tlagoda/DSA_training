@@ -29,7 +29,8 @@
     "romanToInteger": "ts-node --esm src/Leetcode/easy/romanToInteger.ts",
     "pascalTriangle": "ts-node --esm src/Leetcode/easy/pascalTriangle.ts",
     "countAsterisks": "ts-node --esm src/Leetcode/easy/countAsterisks.ts",
-    "majorityElement": "ts-node --esm src/Leetcode/easy/majorityElement.ts"
+    "majorityElement": "ts-node --esm src/Leetcode/easy/majorityElement.ts",
+    "battleshipsInABoard": "ts-node --esm src/Leetcode/medium/battleshipsInABoard.ts"
   },
   "repository": {
     "type": "git",

@@ -35,7 +35,10 @@
  - Two Sum
  - Roman To Integer
  - Pascal's Triangle
+ - Count Asterisks
+ - Majority Element
  
  ### Medium
  - Product Of Array Except Self
  - Rotate List
+ - Battleships In A Board

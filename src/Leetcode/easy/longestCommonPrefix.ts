@@ -19,4 +19,21 @@ const longestCommonPrefix = (strs: string[]): string => {
   return compared;
 };
 
-console.log(longestCommonPrefix(["abcd", "abcdefg", "abc", "ab"]));
+// TESTING
+console.log(["abcd", "abcdefg", "abc", "ab"]);
+console.log(
+  `Longest Common Prefix: ${longestCommonPrefix([
+    "abcd",
+    "abcdefg",
+    "abc",
+    "ab",
+  ])}`
+);
+
+console.log(["abc", "def"]);
+console.log(`Longest Common Prefix: ${longestCommonPrefix(["abc", "def"])}`);
+
+console.log(["flower", "flow", "flight"]);
+console.log(
+  `Longest Common Prefix: ${longestCommonPrefix(["flower", "flow", "flight"])}`
+);

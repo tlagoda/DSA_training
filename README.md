@@ -37,6 +37,7 @@
  - Pascal's Triangle
  - Count Asterisks
  - Majority Element
+ - Happy Number
  
  ### Medium
  - Product Of Array Except Self

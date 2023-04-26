@@ -9,3 +9,26 @@
     - Return true if n is a happy number, and false if not.
 */
 
+const isHappy = (n: number): boolean => {
+  // we use a map to store values we have already encountered
+  // map allow O(1) reading
+  let checked = new Map();
+  let sum = 0;
+
+  while (n !== 1) {
+    for (const digit of n.toString().split("")) {
+      sum += parseInt(digit) * parseInt(digit);
+    }
+    if (sum === 1) {
+      return true;
+    } else {
+      if (checked.get(sum)) {
+        return false;
+      }
+      checked.set(sum, true);
+      n = sum;
+      sum = 0;
+    }
+  }
+  return true;
+};

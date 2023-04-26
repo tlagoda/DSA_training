@@ -32,3 +32,11 @@ const isHappy = (n: number): boolean => {
   }
   return true;
 };
+
+// TESTING
+
+console.log(`12 is a valid number : ${isHappy(12)}`)
+console.log(`1 is a valid number : ${isHappy(1)}`)
+console.log(`19 is a valid number : ${isHappy(19)}`)
+console.log(`33 is a valid number : ${isHappy(33)}`)
+console.log(`100 is a valid number : ${isHappy(100)}`)

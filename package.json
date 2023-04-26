@@ -31,7 +31,8 @@
     "countAsterisks": "ts-node --esm src/Leetcode/easy/countAsterisks.ts",
     "majorityElement": "ts-node --esm src/Leetcode/easy/majorityElement.ts",
     "battleshipsInABoard": "ts-node --esm src/Leetcode/medium/battleshipsInABoard.ts",
-    "longestCommonPrefix": "ts-node --esm src/Leetcode/easy/longestCommonPrefix.ts"
+    "longestCommonPrefix": "ts-node --esm src/Leetcode/easy/longestCommonPrefix.ts",
+    "happyNumber": "ts-node --esm src/Leetcode/easy/happyNumber.ts"
   },
   "repository": {
     "type": "git",

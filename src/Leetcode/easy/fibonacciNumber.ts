@@ -8,9 +8,17 @@
     Given n, calculate F(n).
 */
 
-const getFibNumber = (n: number): number => {
+// TODO: learn and use "Memoization"
+const getFibonacciNumber = (n: number): number => {
   if (n <= 1) {
     return n;
   }
-  return getFibNumber(n - 1) + getFibNumber(n - 2);
+  return getFibonacciNumber(n - 1) + getFibonacciNumber(n - 2);
 };
+
+// TESTING
+
+const nums = [3,7,10,15,20,30]
+nums.forEach(num => {
+    console.log(`n = ${num}, Fibonacci Number = ${getFibonacciNumber(num)}`)
+})

@@ -9,9 +9,8 @@
 */
 
 const getFibNumber = (n: number): number => {
-    if(n === 0 || n === 1) {
-        return n === 0 ? 0 : 1
-    }
-    return getFibNumber(n-1) + getFibNumber(n-2)
+  if (n <= 1) {
+    return n;
+  }
+  return getFibNumber(n - 1) + getFibNumber(n - 2);
 };
-

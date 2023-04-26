@@ -38,6 +38,8 @@
  - Count Asterisks
  - Majority Element
  - Happy Number
+ - Longest Common Prefix
+ - Fibonacci Number
  
  ### Medium
  - Product Of Array Except Self

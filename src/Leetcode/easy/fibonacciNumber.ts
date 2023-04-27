@@ -8,17 +8,22 @@
     Given n, calculate F(n).
 */
 
-// TODO: learn and use "Memoization"
-const getFibonacciNumber = (n: number): number => {
-  if (n <= 1) {
-    return n;
-  }
-  return getFibonacciNumber(n - 1) + getFibonacciNumber(n - 2);
+interface Memo {
+  n?: Number;
+}
+let i = 0
+const getFibonacciNumber = (n: number, memo: Memo): number => {
+  memo = memo || {};
+  i++
+  if (memo[n]) return memo[n];
+  if (n <= 1) return n;
+
+  return memo[n] = getFibonacciNumber(n - 1, memo) + getFibonacciNumber(n - 2, memo);
 };
 
 // TESTING
 
-const nums = [3,7,10,15,20,30]
-nums.forEach(num => {
-    console.log(`n = ${num}, Fibonacci Number = ${getFibonacciNumber(num)}`)
-})
+const nums = [3, 7, 10, 15, 20, 30, 40, 50, 60, 70];
+nums.forEach((num) => {
+  console.log(`n = ${num}, Fibonacci Number = ${getFibonacciNumber(num, {})}`);
+});

@@ -11,10 +11,10 @@
 interface Memo {
   n?: Number;
 }
-let i = 0
+
 const getFibonacciNumber = (n: number, memo: Memo): number => {
   memo = memo || {};
-  i++
+  
   if (memo[n]) return memo[n];
   if (n <= 1) return n;
 

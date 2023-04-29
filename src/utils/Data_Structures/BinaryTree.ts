@@ -12,3 +12,13 @@ class BinaryTreeNode {
     this.right = null;
   }
 }
+
+class BinaryTree {
+  root: BinaryTreeNode;
+  count: number;
+  min: number;
+  max: number;
+  constructor(value: number) {
+    this.root = new BinaryTreeNode(value);
+  }
+}

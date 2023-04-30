@@ -40,6 +40,7 @@
  - Happy Number
  - Longest Common Prefix
  - Fibonacci Number
+ - Symmetric Tree
  
  ### Medium
  - Product Of Array Except Self

@@ -3,10 +3,12 @@
 class SinglyLinkedList {
   head: SinglyLinkedListNode;
   tail: SinglyLinkedListNode;
+  hasCycle: boolean;
 
   constructor() {
     this.head = null;
     this.tail = null;
+    this.hasCycle = false;
   }
 
   append(value: number): void {
@@ -74,14 +76,28 @@ class SinglyLinkedList {
     return null;
   }
 
-  toString(): string {
-    let head = this.head;
-    const result = [];
-    while (head) {
-      result.push(head.data);
-      head = head.next;
+  makeCycleFromTail(index: number) {
+    let currentNode = this.head;
+    for (let i = 1; i <= index; i++) {
+      currentNode = currentNode.next;
     }
-    return result.join(" -> ");
+    this.tail.next = currentNode;
+    this.hasCycle = true;
+    console.log(`tail.next now equals node at index ${index}.`);
+  }
+
+  toString(): string {
+    if (!this.hasCycle) {
+      let head = this.head;
+      const result = [];
+      while (head) {
+        result.push(head.data);
+        head = head.next;
+      }
+      return result.join(" -> ");
+    } else {
+      return 'Cannot print cycled list.'
+    }
   }
 }
 
@@ -101,4 +117,4 @@ class SinglyLinkedListNode {
 
 // EXPORT
 
-export { SinglyLinkedListNode, SinglyLinkedList }
+export { SinglyLinkedListNode, SinglyLinkedList };

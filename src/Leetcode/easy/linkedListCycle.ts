@@ -14,6 +14,7 @@
 import { generateSinglyLinkedList } from "../../utils/Data_Structures/LinkedListService.ts";
 import { SinglyLinkedListNode } from "../../utils/Data_Structures/SinglyLinkedList.ts";
 
+// using the Floyd's Cycle Finding Algorithm
 const hasCycle = (head: SinglyLinkedListNode): boolean => {
   if (head === null) {
     return false;

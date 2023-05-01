@@ -55,3 +55,7 @@ class BinaryTree {
     }
   }
 }
+
+// TODO
+// replace count with size and height properties, adjust insert() method
+// add delete(value) / contains(value) / 3 traverse

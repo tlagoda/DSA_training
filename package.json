@@ -35,6 +35,7 @@
     "happyNumber": "ts-node --esm src/Leetcode/easy/happyNumber.ts",
     "fibonacciNumber": "ts-node --esm src/Leetcode/easy/fibonacciNumber.ts",
     "searchInsertPosition": "ts-node --esm src/Leetcode/easy/searchInsertPosition.ts",
+    "singleNumber": "ts-node --esm src/Leetcode/easy/singleNumber.ts",
     "linkedListCycle": "ts-node --esm src/Leetcode/easy/linkedListCycle.ts"
   },
   "repository": {

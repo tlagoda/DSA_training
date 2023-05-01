@@ -5,8 +5,6 @@
     You must implement a solution with a linear runtime complexity and use only constant extra space.
 */
 
-import { HashTable } from "../../utils/Data_Structures/HashTable.ts";
-
 const getSingleNumber = (nums: number[]): number => {
   const map = new Map<number, boolean>();
   for (const num of nums) {
@@ -17,5 +15,15 @@ const getSingleNumber = (nums: number[]): number => {
     }
   }
   return map.keys().next().value;
+};
+
+// Solution for linear runtime complexity and use only constant extra space
+
+const getSingleNumberV2 = (nums: number[]): number => {
+  let a = 0;
+  for (const i of nums) {
+    a ^= i;
+  }
+  return a;
 };
 

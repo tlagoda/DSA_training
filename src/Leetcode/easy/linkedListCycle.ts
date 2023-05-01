@@ -11,6 +11,7 @@
     Follow up: Can you solve it using O(1) (i.e. constant) memory?
 */
 
+import { generateSinglyLinkedList } from "../../utils/Data_Structures/LinkedListService.ts";
 import { SinglyLinkedListNode } from "../../utils/Data_Structures/SinglyLinkedList.ts";
 
 const hasCycle = (head: SinglyLinkedListNode): boolean => {

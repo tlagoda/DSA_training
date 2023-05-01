@@ -10,3 +10,18 @@
 
     Follow up: Can you solve it using O(1) (i.e. constant) memory?
 */
+
+import { SinglyLinkedListNode } from "../../utils/Data_Structures/SinglyLinkedList.ts";
+
+const hasCycle = (head: SinglyLinkedListNode): boolean => {
+  let slowRunner = head;
+  let fastRunner = head.next;
+  while (slowRunner !== fastRunner) {
+    if (fastRunner === null || fastRunner.next === null) {
+      return false;
+    }
+    slowRunner = slowRunner.next;
+    fastRunner = fastRunner.next.next;
+  }
+  return true;
+};

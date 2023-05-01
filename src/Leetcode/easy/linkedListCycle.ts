@@ -29,3 +29,11 @@ const hasCycle = (head: SinglyLinkedListNode): boolean => {
   }
   return true;
 };
+
+// TESTING
+
+const ll1 = generateSinglyLinkedList(10,10)
+console.log(`ll1 has cycle: ${hasCycle(ll1.head)}`)
+console.log('Add cycle within ll1...')
+ll1.makeCycleFromTail(5)
+console.log(`ll1 has cycle: ${hasCycle(ll1.head)}`)

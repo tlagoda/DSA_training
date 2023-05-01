@@ -15,6 +15,9 @@ import { generateSinglyLinkedList } from "../../utils/Data_Structures/LinkedList
 import { SinglyLinkedListNode } from "../../utils/Data_Structures/SinglyLinkedList.ts";
 
 const hasCycle = (head: SinglyLinkedListNode): boolean => {
+  if (head === null) {
+    return false;
+  }
   let slowRunner = head;
   let fastRunner = head.next;
   while (slowRunner !== fastRunner) {

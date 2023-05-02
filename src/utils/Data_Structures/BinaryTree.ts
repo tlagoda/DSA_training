@@ -15,7 +15,7 @@ class BinaryTreeNode {
 
 class BinaryTree {
   root: BinaryTreeNode;
-  count: number = 1;
+  size: number = 1;
   min?: number;
   max?: number;
 
@@ -26,7 +26,7 @@ class BinaryTree {
   }
 
   insert(value: number): void {
-    if ((this.min && value < this.min) || (this.max && value > this.max)) {
+    if (value < this.min || value > this.max) {
       console.log("Invalid value.");
       return;
     }
@@ -40,7 +40,7 @@ class BinaryTree {
           node = node.left;
         } else {
           node.left = newNode;
-          this.count++;
+          this.size++;
           break;
         }
       } else {
@@ -48,7 +48,7 @@ class BinaryTree {
           node = node.right;
         } else {
           node.right = newNode;
-          this.count++;
+          this.size++;
           break;
         }
       }

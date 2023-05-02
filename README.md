@@ -41,6 +41,9 @@
  - Longest Common Prefix
  - Fibonacci Number
  - Symmetric Tree
+ - Linked List Cycle
+ - Search Insert Position
+ - Single Number
  
  ### Medium
  - Product Of Array Except Self

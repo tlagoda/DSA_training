@@ -7,3 +7,10 @@
 const isPowerOfThree = (n: number): boolean => {
     return (Math.log10(n) / Math.log10(3)) % 1 == 0;
 };
+
+// if n = 3^x
+// then x = log3(n)
+// then x = log10(n)/log10(3)
+// n is a power of three if x is an integer
+// n is an integer if n % 1 === 0
+

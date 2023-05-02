@@ -62,5 +62,4 @@ class BinaryTree {
   }
 }
 
-// TODO
-// add delete(value) / contains(value) / 3 traverse
+export { BinaryTreeNode, BinaryTree };

@@ -16,6 +16,7 @@ class BinaryTreeNode {
 class BinaryTree {
   root: BinaryTreeNode;
   size: number = 1;
+  height: number = 0;
   min?: number;
   max?: number;
 
@@ -33,22 +34,27 @@ class BinaryTree {
 
     const newNode = new BinaryTreeNode(value);
     let node = this.root;
+    let level = 1;
 
     while (true) {
       if (Math.random() < 0.5) {
         if (node.left) {
           node = node.left;
+          level++;
         } else {
           node.left = newNode;
           this.size++;
+          this.height = Math.max(this.height, level + 1);
           break;
         }
       } else {
         if (node.right) {
           node = node.right;
+          level++;
         } else {
           node.right = newNode;
           this.size++;
+          this.height = Math.max(this.height, level + 1);
           break;
         }
       }
@@ -57,5 +63,4 @@ class BinaryTree {
 }
 
 // TODO
-// replace count with size and height properties, adjust insert() method
 // add delete(value) / contains(value) / 3 traverse

@@ -14,3 +14,10 @@ const isPowerOfThree = (n: number): boolean => {
 // n is a power of three if x is an integer
 // n is an integer if n % 1 === 0
 
+// TESTING
+
+const test = [3,9,27,0,81,60,54,30,1]
+
+test.forEach((n) => {
+    console.log(`${n} is a power of three : ${isPowerOfThree(n)}`)
+})

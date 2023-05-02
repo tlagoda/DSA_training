@@ -11,3 +11,5 @@ const generateBinaryTree = (
   }
   return tree
 };
+
+export { generateBinaryTree }

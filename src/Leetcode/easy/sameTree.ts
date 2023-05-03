@@ -6,6 +6,7 @@
 */
 
 import { BinaryTreeNode } from "../../utils/Data_Structures/BinaryTree.ts";
+import { generateBinaryTree } from "../../utils/Data_Structures/TreeService.ts";
 
 const isSameTree = (root1: BinaryTreeNode, root2: BinaryTreeNode): boolean => {
   if (root1 === null && root2 === null) {
@@ -20,3 +21,11 @@ const isSameTree = (root1: BinaryTreeNode, root2: BinaryTreeNode): boolean => {
     );
   }
 };
+
+// TESTING
+
+const tree1 = generateBinaryTree(30)
+const tree2 = generateBinaryTree(30)
+const tree3 = tree1
+console.log('tree1 and tree2 are the same : ' + isSameTree(tree1.root, tree2.root))
+console.log('tree1 and tree3 are the same : ' + isSameTree(tree1.root, tree3.root))

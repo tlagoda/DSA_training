@@ -37,7 +37,8 @@
     "searchInsertPosition": "ts-node --esm src/Leetcode/easy/searchInsertPosition.ts",
     "singleNumber": "ts-node --esm src/Leetcode/easy/singleNumber.ts",
     "linkedListCycle": "ts-node --esm src/Leetcode/easy/linkedListCycle.ts",
-    "powerOfThree": "ts-node --esm src/Leetcode/easy/powerOfThree.ts"
+    "powerOfThree": "ts-node --esm src/Leetcode/easy/powerOfThree.ts",
+    "sameTree": "ts-node --esm src/Leetcode/easy/sameTree.ts"
   },
   "repository": {
     "type": "git",

@@ -38,7 +38,8 @@
     "singleNumber": "ts-node --esm src/Leetcode/easy/singleNumber.ts",
     "linkedListCycle": "ts-node --esm src/Leetcode/easy/linkedListCycle.ts",
     "powerOfThree": "ts-node --esm src/Leetcode/easy/powerOfThree.ts",
-    "sameTree": "ts-node --esm src/Leetcode/easy/sameTree.ts"
+    "sameTree": "ts-node --esm src/Leetcode/easy/sameTree.ts",
+    "symmetricTree": "ts-node --esm src/Leetcode/easy/symmetricTree.ts"
   },
   "repository": {
     "type": "git",

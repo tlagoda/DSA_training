@@ -10,13 +10,11 @@ const isSymmetric = (root: BinaryTreeNode): boolean => {
 };
 
 const areEquals = (node1: BinaryTreeNode, node2: BinaryTreeNode): boolean => {
-  if (node1 === null && node2 === null) return true;
-  if (node1 === null || node2 === null) return false;
+  if (!node1 && !node2) return true;
+  if (!node1 || !node2) return false;
   return (
     node1.data === node2.data &&
     areEquals(node1.left, node2.right) &&
     areEquals(node1.right, node2.left)
   );
 };
-
-

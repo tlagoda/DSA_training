@@ -44,6 +44,8 @@
  - Linked List Cycle
  - Search Insert Position
  - Single Number
+ - Power Of Three
+ - Same Tree
  
  ### Medium
  - Product Of Array Except Self
